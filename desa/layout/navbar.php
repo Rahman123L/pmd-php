@@ -1,4 +1,4 @@
-<nav class="fixed top-0 z-40 w-full bg-[#F2F8FF] py-4 px-5 md:px-8">
+<nav class="fixed top-0 z-40 w-full bg-[#ECE5DD] py-4 px-5 md:px-8">
     <div class="flex justify-between items-center">
         <button @click="if (window.innerWidth < 786) isOpen = !isOpen" class="visible md:invisible">
             <svg class="w-[22px] md:w-6 fill-black" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -26,21 +26,21 @@
                             </div>
                             <div class="px-3 pb-3 space-y-2">
                                 <div class="flex items-center gap-3 md:gap-4">
-                                    <button @click="tab = 1" :class="tab == 1 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
+                                    <button @click="tab = 1" :class="tab == 1 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
                                         <h1 class="text-[10px] md:text-xs  font-normal">Semua</h1>
                                     </button>
-                                    <button @click="tab = 2" :class="tab == 2 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="flex items-center gap-2 md:gap-3 p-2 transition-colors border-b-[1.5px]">
+                                    <button @click="tab = 2" :class="tab == 2 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="flex items-center gap-2 md:gap-3 p-2 transition-colors border-b-[1.5px]">
                                         <h1 class="text-[10px] md:text-xs font-normal">Belum dilihat</h1>
                                         <div class="bg-[#FF4E4E] py-0.5 px-[7px] rounded-full">
                                             <h1 class="text-[8px] md:text-[10px] text-white font-normal">4</h1>
                                         </div>
                                     </button>
-                                    <button @click="tab = 3" :class="tab == 3 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
+                                    <button @click="tab = 3" :class="tab == 3 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
                                         <h1 class="text-[10px] md:text-xs font-normal">Sudah dilihat</h1>
                                     </button>
                                 </div>
                                 <div class="flex justify-end items-center">
-                                    <button class="bg-[#6777EF] py-1.5 px-3 rounded md:rounded-md">
+                                    <button class="bg-primary py-1.5 px-3 rounded md:rounded-md">
                                         <h1 class="text-[10px] md:text-xs text-white font-normal">Tandai sudah dilihat</h1>
                                     </button>
                                 </div>
@@ -220,9 +220,9 @@
                                 </div>
                             </div>
                             <a href="/desa/notifikasi.php" class="flex justify-center items-center gap-2 md:gap-3 py-2.5 px-4">
-                                <h1 class="text-xs md:text-sm text-[#615EFC] font-normal">Selengkapnya</h1>
-                                <svg class="w-1 md:w-1.5" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.941406 1.13574L2.19018 2.37342C3.18605 3.36044 3.68398 3.85395 3.76065 4.45546C3.77944 4.60284 3.77944 4.75198 3.76065 4.89935C3.68398 5.50086 3.18605 5.99438 2.19018 6.9814L0.941406 8.21908" stroke="#615EFC" stroke-width="1.5" stroke-linecap="round"/>
+                                <h1 class="text-xs md:text-sm text-primary font-normal">Selengkapnya</h1>
+                                <svg class="w-1 md:w-1.5 stroke-primary" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.941406 1.13574L2.19018 2.37342C3.18605 3.36044 3.68398 3.85395 3.76065 4.45546C3.77944 4.60284 3.77944 4.75198 3.76065 4.89935C3.68398 5.50086 3.18605 5.99438 2.19018 6.9814L0.941406 8.21908" stroke-width="1.5" stroke-linecap="round"/>
                                 </svg>
                             </a>
                         </div>
@@ -245,7 +245,7 @@
                             </div>
                             <div class="bg-transparent py-3 px-4">
                                 <div class="flex justify-end items-center">
-                                    <button @click="pesan = 2" class="bg-[#6777EF] py-1.5 px-3 rounded md:rounded-md">
+                                    <button @click="pesan = 2" class="bg-primary py-1.5 px-3 rounded md:rounded-md">
                                         <h1 class="text-[10px] md:text-xs text-white font-normal">Kirim pesan</h1>
                                     </button>
                                 </div>
@@ -281,10 +281,10 @@
                                                     <p class="text-[10px] md:text-xs text-black font-normal">Halo admin tolong acc akun saya</p>
                                                 </div>
                                                 <div class="flex items-center gap-2">
-                                                    <svg class="w-3 fill-[#615EFC]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <svg class="w-3 fill-primary" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M11.0064 1.01251C11.161 0.826892 11.136 0.55102 10.9503 0.396336C10.7647 0.241652 10.4888 0.266731 10.3342 0.452352L7.1896 4.22583C6.55795 4.98381 6.1136 5.51538 5.72819 5.8634C5.35177 6.20331 5.09199 6.31135 4.83693 6.31135C4.58186 6.31135 4.32208 6.20331 3.94566 5.8634C3.56025 5.51538 3.1159 4.98381 2.48425 4.22582L1.67302 3.25235C1.51834 3.06673 1.24247 3.04165 1.05684 3.19634C0.871223 3.35102 0.846144 3.62689 1.00083 3.81251L1.83457 4.813C2.43848 5.53771 2.92211 6.11809 3.35924 6.51281C3.81077 6.92055 4.27234 7.18634 4.83693 7.18634C5.40151 7.18634 5.86308 6.92055 6.31461 6.51282C6.75174 6.11809 7.23536 5.53772 7.83927 4.81302L11.0064 1.01251Z"/>
                                                     </svg>
-                                                    <h1 class="text-[8px] md:text-[10px] text-[#615EFC] font-normal">Sudah dilihat admin</h1>
+                                                    <h1 class="text-[8px] md:text-[10px] text-primary font-normal">Sudah dilihat admin</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -293,15 +293,15 @@
                                 </a>
                             </div>
                             <a href="/desa/inbox.php" class="flex justify-center items-center gap-2 md:gap-3 py-2.5 px-4">
-                                <h1 class="text-xs md:text-sm text-[#615EFC] font-normal">Selengkapnya</h1>
-                                <svg class="w-1 md:w-1.5" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.941406 1.13574L2.19018 2.37342C3.18605 3.36044 3.68398 3.85395 3.76065 4.45546C3.77944 4.60284 3.77944 4.75198 3.76065 4.89935C3.68398 5.50086 3.18605 5.99438 2.19018 6.9814L0.941406 8.21908" stroke="#615EFC" stroke-width="1.5" stroke-linecap="round"/>
+                                <h1 class="text-xs md:text-sm text-primary font-normal">Selengkapnya</h1>
+                                <svg class="w-1 md:w-1.5 stroke-primary" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.941406 1.13574L2.19018 2.37342C3.18605 3.36044 3.68398 3.85395 3.76065 4.45546C3.77944 4.60284 3.77944 4.75198 3.76065 4.89935C3.68398 5.50086 3.18605 5.99438 2.19018 6.9814L0.941406 8.21908" stroke-width="1.5" stroke-linecap="round"/>
                                 </svg>
                             </a>
                         </div>
                         <div x-show="pesan == 2">
                             <form action="" method="" x-show="isOpen" x-transition.duration.300ms.opacity.50 @click.outside="isOpen = false" class="flex flex-col justify-between items-center w-72 h-80 bg-white rounded-xl shadow-md shadow-[#0000001A]">
-                                <div class="w-full flex justify-center items-center gap-3 bg-[#615EFC] py-3 rounded-t-xl">
+                                <div class="w-full flex justify-center items-center gap-3 bg-primary py-3 rounded-t-xl">
                                     <svg @click="pesan = 1" class="w-[7px] cursor-pointer" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6.09437 2.03269C6.38856 1.74111 6.39068 1.26624 6.0991 0.972041C5.80751 0.677844 5.33264 0.675726 5.03845 0.967309L3.24371 2.7461C2.56774 3.41604 2.01527 3.96359 1.62346 4.45146C1.21603 4.95878 0.921101 5.47372 0.842315 6.09184C0.80777 6.36286 0.80777 6.63714 0.842315 6.90816C0.921101 7.52628 1.21603 8.04122 1.62346 8.54854C2.01527 9.03641 2.56773 9.58395 3.2437 10.2539L5.03845 12.0327C5.33264 12.3243 5.80751 12.3222 6.0991 12.028C6.39068 11.7338 6.38856 11.2589 6.09436 10.9673L4.3314 9.22C3.6159 8.51086 3.1251 8.02282 2.793 7.60929C2.4704 7.2076 2.35973 6.94958 2.33028 6.7185C2.31178 6.57341 2.31178 6.42659 2.33028 6.2815C2.35973 6.05042 2.4704 5.7924 2.793 5.39071C3.1251 4.97718 3.6159 4.48914 4.3314 3.78L6.09437 2.03269Z" fill="white"/>
                                     </svg>
@@ -319,7 +319,7 @@
                                     </div>
                                     <div class="flex justify-center items-center">
                                         <input type="text" placeholder="Kirim Pesan ke Admin PMD" autocomplete="off" class="w-full bg-white border-none text-[10px] md:text-xs text-[#ABABAB] font-normal rounded-l-md focus:outline-none focus:ring-0 placeholder:text-[10px] md:placeholder:text-xs placeholder:text-[#ABABAB] placeholder:font-normal shadow-md shadow-[#0000001A]">
-                                        <button class="bg-[#615EFC] py-2 px-4 rounded-r-md shadow-md shadow-[#0000001A]">
+                                        <button class="bg-primary py-2 px-4 rounded-r-md shadow-md shadow-[#0000001A]">
                                             <h1 class="text-[10px] md:text-xs text-white font-medium">Kirim</h1>
                                         </button>
                                     </div>
@@ -358,13 +358,15 @@
                             </button>
                         </a>
                         <div class="border-b-[0.5px] border-[#E6E6E6]"></div>
-                        <button class="flex items-center gap-2 md:gap-3">
-                            <svg class="w-2 md:w-2.5 fill-[#FF4E4E]" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.16877 0.718752C7.63028 0.718716 7.9114 0.718693 8.15389 0.7571C9.4866 0.96818 10.5318 2.0134 10.7429 3.34611C10.7813 3.5886 10.7813 3.86972 10.7812 4.33123L10.7812 7.66878C10.7813 8.13029 10.7813 8.41141 10.7429 8.6539C10.5318 9.98661 9.4866 11.0318 8.15389 11.2429C7.9114 11.2813 7.63028 11.2813 7.16876 11.2813L6.58333 11.2813C5.88264 11.2813 5.23493 11.0494 4.71434 10.6584C4.53495 10.5236 4.49876 10.2689 4.6335 10.0896C4.76825 9.91016 5.02292 9.87396 5.20231 10.0087C5.58703 10.2977 6.06461 10.4688 6.58333 10.4688H7.125C7.64373 10.4688 7.8558 10.4675 8.02679 10.4404C9.01183 10.2844 9.78439 9.51184 9.9404 8.5268C9.96748 8.35581 9.96875 8.14374 9.96875 7.625L9.96875 4.375C9.96875 3.85627 9.96748 3.6442 9.9404 3.47321C9.78439 2.48817 9.01183 1.71561 8.02679 1.5596C7.8558 1.53252 7.64373 1.53125 7.125 1.53125H6.58333C6.06461 1.53125 5.58703 1.70233 5.20231 1.9913C5.02292 2.12605 4.76825 2.08985 4.6335 1.91046C4.49876 1.73106 4.53495 1.4764 4.71434 1.34165C5.23493 0.950623 5.88264 0.718755 6.58333 0.718755L7.16877 0.718752Z"/>
-                                <path d="M2.53926 3.51501C2.71507 3.37561 2.97059 3.40513 3.10999 3.58094C3.24939 3.75675 3.21987 4.01227 3.04406 4.15167L2.08912 4.90883C1.70777 5.2112 1.44669 5.41898 1.26932 5.59376L8.20833 5.59375C8.43269 5.59375 8.61458 5.77564 8.61458 6C8.61458 6.22437 8.43269 6.40625 8.20833 6.40625L1.26932 6.40626C1.44669 6.58103 1.70778 6.78881 2.08912 7.09118L3.04406 7.84834C3.21987 7.98774 3.24939 8.24326 3.10999 8.41907C2.9706 8.59488 2.71507 8.6244 2.53926 8.485L1.56493 7.71246C1.20066 7.42365 0.900078 7.18533 0.685946 6.97202C0.466205 6.75313 0.284047 6.51017 0.234581 6.1997C0.224043 6.13356 0.218746 6.06684 0.218746 6.00001C0.218746 5.93317 0.224043 5.86645 0.234581 5.80031C0.284047 5.48984 0.466205 5.24688 0.685944 5.02799C0.900075 4.81468 1.20065 4.57637 1.56492 4.28756L2.53926 3.51501Z"/>
-                            </svg>       
-                            <h1 class="text-[10px] md:text-xs text-[#FF5555] font-medium">Keluar</h1>
-                        </button>
+                        <a href="/index.php">
+                            <button class="flex items-center gap-2 md:gap-3">
+                                <svg class="w-2 md:w-2.5 fill-[#FF4E4E]" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.16877 0.718752C7.63028 0.718716 7.9114 0.718693 8.15389 0.7571C9.4866 0.96818 10.5318 2.0134 10.7429 3.34611C10.7813 3.5886 10.7813 3.86972 10.7812 4.33123L10.7812 7.66878C10.7813 8.13029 10.7813 8.41141 10.7429 8.6539C10.5318 9.98661 9.4866 11.0318 8.15389 11.2429C7.9114 11.2813 7.63028 11.2813 7.16876 11.2813L6.58333 11.2813C5.88264 11.2813 5.23493 11.0494 4.71434 10.6584C4.53495 10.5236 4.49876 10.2689 4.6335 10.0896C4.76825 9.91016 5.02292 9.87396 5.20231 10.0087C5.58703 10.2977 6.06461 10.4688 6.58333 10.4688H7.125C7.64373 10.4688 7.8558 10.4675 8.02679 10.4404C9.01183 10.2844 9.78439 9.51184 9.9404 8.5268C9.96748 8.35581 9.96875 8.14374 9.96875 7.625L9.96875 4.375C9.96875 3.85627 9.96748 3.6442 9.9404 3.47321C9.78439 2.48817 9.01183 1.71561 8.02679 1.5596C7.8558 1.53252 7.64373 1.53125 7.125 1.53125H6.58333C6.06461 1.53125 5.58703 1.70233 5.20231 1.9913C5.02292 2.12605 4.76825 2.08985 4.6335 1.91046C4.49876 1.73106 4.53495 1.4764 4.71434 1.34165C5.23493 0.950623 5.88264 0.718755 6.58333 0.718755L7.16877 0.718752Z"/>
+                                    <path d="M2.53926 3.51501C2.71507 3.37561 2.97059 3.40513 3.10999 3.58094C3.24939 3.75675 3.21987 4.01227 3.04406 4.15167L2.08912 4.90883C1.70777 5.2112 1.44669 5.41898 1.26932 5.59376L8.20833 5.59375C8.43269 5.59375 8.61458 5.77564 8.61458 6C8.61458 6.22437 8.43269 6.40625 8.20833 6.40625L1.26932 6.40626C1.44669 6.58103 1.70778 6.78881 2.08912 7.09118L3.04406 7.84834C3.21987 7.98774 3.24939 8.24326 3.10999 8.41907C2.9706 8.59488 2.71507 8.6244 2.53926 8.485L1.56493 7.71246C1.20066 7.42365 0.900078 7.18533 0.685946 6.97202C0.466205 6.75313 0.284047 6.51017 0.234581 6.1997C0.224043 6.13356 0.218746 6.06684 0.218746 6.00001C0.218746 5.93317 0.224043 5.86645 0.234581 5.80031C0.284047 5.48984 0.466205 5.24688 0.685944 5.02799C0.900075 4.81468 1.20065 4.57637 1.56492 4.28756L2.53926 3.51501Z"/>
+                                </svg>       
+                                <h1 class="text-[10px] md:text-xs text-[#FF5555] font-medium">Keluar</h1>
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <div x-data="{ notif : false }" x-show="notif" :class="{ 'block': notif, 'hidden': !notif }" class="hidden w-max absolute right-0">

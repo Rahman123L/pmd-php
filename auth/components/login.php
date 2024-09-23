@@ -51,7 +51,7 @@
             </div>
             <div class="w-full p-3.5 flex justify-center items-center">
                 <input type="text" placeholder="Kirim Pesan ke Admin PMD" autocomplete="off" class="w-full bg-white border-none text-[10px] md:text-xs text-[#ABABAB] font-normal rounded-l-md focus:outline-none focus:ring-0 placeholder:text-[10px] md:placeholder:text-xs placeholder:text-[#ABABAB] placeholder:font-normal">
-                <button class="bg-[#615EFC] py-2 px-4 rounded-r-md">
+                <button class="bg-[#615EFC] py-3 px-4 rounded-r-md">
                     <h1 class="text-[10px] md:text-xs text-white font-medium">Kirim</h1>
                 </button>
             </div>

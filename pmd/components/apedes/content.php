@@ -6,15 +6,33 @@
         <div x-data="{ isOpen : false }" class="space-y-5">
             <div class="flex justify-between items-center">
                 <h1 class="text-base md:text-lg lg:text-xl text-black font-medium">Laporan APEDES</h1>
-                <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-[#615EFC] font-medium">Home</span> / Laporan APEDES</h1>
+                <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-primary font-medium">Home</span> / Laporan APEDES</h1>
+            </div>
+            <div class="w-full md:w-[60%] lg:w-[40%] bg-white py-5 md:py-6 px-5 space-y-2 rounded md:rounded-md shadow-md shadow-black/5">
+                <h1 class="text-xs md:text-sm text-black font-normal">Silahkan Pilih <span class="text-[#EA5858] font-medium">Desa</span></h1>
+                <button @click="isOpen = !isOpen" class="flex items-center gap-1 md:gap-2 bg-primary py-1.5 px-4 rounded">
+                    <h1 class="text-xs md:text-sm text-white font-medium">Pilih Desa</h1>
+                    <svg :class="{ 'rotate-90 ' : isOpen }"  class="w-4 stroke-white stroke-[2]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5L15 12L9 19" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
             <?php include_once("../pmd/components/desa/content.php") ?>
+            <div :class="isOpen ? 'hidden' : 'block'" class="flex justify-center items-center pt-10">
+                <div class="space-y-2">
+                    <img class="w-28 md:w-32 h-28 md:h-32 mx-auto" src="/svgs/search.svg">
+                    <div class="text-center">
+                        <h1 class="text-lg md:text-xl text-black font-medium">Desa Tidak Ditemukan</h1>
+                        <h1 class="text-[10px] md:text-xs text-[#7A7A7A] font-normal">Pilih Desa untuk memunculkan data</h1>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <section class="space-y-3">
             <section class="w-full lg:flex justify-between items-center gap-3 space-y-3 lg:space-y-0">
                 <div class="w-full md:w-[60%] lg:w-[40%] bg-white py-3 md:py-4 px-5 space-y-2 rounded md:rounded-md shadow-md shadow-black/5">
-                    <h1 class="text-xs md:text-sm text-[#5869EA] font-semibold">Laporan APEDES Desa Janji</h1>
+                    <h1 class="text-xs md:text-sm text-primary font-semibold">Laporan APEDES Desa Janji</h1>
                 </div>
                 <div class="md:flex items-center gap-3 space-y-3 md:space-y-0">
                     <div x-data="{ selected : null, isOpen : false }" class="flex items-center gap-2 md:gap-3">
@@ -75,7 +93,7 @@
                         <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:sticky last:right-0">04-09-2024</td>
                         <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:sticky last:right-0">07-09-2024</td>
                         <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:sticky last:right-0">
-                            <a href="laporanApedes.php" class="flex items-center gap-2 w-fit bg-[#5869EA] py-1.5 px-2 rounded-md mx-auto">
+                            <a href="laporanApedes.php" class="flex items-center gap-2 w-fit bg-primary py-1.5 px-2 rounded-md mx-auto">
                                 <svg class="w-4 fill-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.25C9.92893 8.25 8.25 9.92893 8.25 12C8.25 14.0711 9.92893 15.75 12 15.75C14.0711 15.75 15.75 14.0711 15.75 12C15.75 9.92893 14.0711 8.25 12 8.25ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.25C7.48587 3.25 4.44529 5.9542 2.68057 8.24686L2.64874 8.2882C2.24964 8.80653 1.88206 9.28392 1.63269 9.8484C1.36564 10.4529 1.25 11.1117 1.25 12C1.25 12.8883 1.36564 13.5471 1.63269 14.1516C1.88206 14.7161 2.24964 15.1935 2.64875 15.7118L2.68057 15.7531C4.44529 18.0458 7.48587 20.75 12 20.75C16.5141 20.75 19.5547 18.0458 21.3194 15.7531L21.3512 15.7118C21.7504 15.1935 22.1179 14.7161 22.3673 14.1516C22.6344 13.5471 22.75 12.8883 22.75 12C22.75 11.1117 22.6344 10.4529 22.3673 9.8484C22.1179 9.28391 21.7504 8.80652 21.3512 8.28818L21.3194 8.24686C19.5547 5.9542 16.5141 3.25 12 3.25ZM3.86922 9.1618C5.49864 7.04492 8.15036 4.75 12 4.75C15.8496 4.75 18.5014 7.04492 20.1308 9.1618C20.5694 9.73159 20.8263 10.0721 20.9952 10.4545C21.1532 10.812 21.25 11.2489 21.25 12C21.25 12.7511 21.1532 13.188 20.9952 13.5455C20.8263 13.9279 20.5694 14.2684 20.1308 14.8382C18.5014 16.9551 15.8496 19.25 12 19.25C8.15036 19.25 5.49864 16.9551 3.86922 14.8382C3.43064 14.2684 3.17374 13.9279 3.00476 13.5455C2.84684 13.188 2.75 12.7511 2.75 12C2.75 11.2489 2.84684 10.812 3.00476 10.4545C3.17374 10.0721 3.43063 9.73159 3.86922 9.1618Z"/>
@@ -100,7 +118,7 @@
                         <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:sticky last:right-0">04-09-2024</td>
                         <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:sticky last:right-0">07-09-2024</td>
                         <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:sticky last:right-0">
-                            <a href="laporanApedes.php" class="flex items-center gap-2 w-fit bg-[#5869EA] py-1.5 px-2 rounded-md mx-auto">
+                            <a href="laporanApedes.php" class="flex items-center gap-2 w-fit bg-primary py-1.5 px-2 rounded-md mx-auto">
                                 <svg class="w-4 fill-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.25C9.92893 8.25 8.25 9.92893 8.25 12C8.25 14.0711 9.92893 15.75 12 15.75C14.0711 15.75 15.75 14.0711 15.75 12C15.75 9.92893 14.0711 8.25 12 8.25ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.25C7.48587 3.25 4.44529 5.9542 2.68057 8.24686L2.64874 8.2882C2.24964 8.80653 1.88206 9.28392 1.63269 9.8484C1.36564 10.4529 1.25 11.1117 1.25 12C1.25 12.8883 1.36564 13.5471 1.63269 14.1516C1.88206 14.7161 2.24964 15.1935 2.64875 15.7118L2.68057 15.7531C4.44529 18.0458 7.48587 20.75 12 20.75C16.5141 20.75 19.5547 18.0458 21.3194 15.7531L21.3512 15.7118C21.7504 15.1935 22.1179 14.7161 22.3673 14.1516C22.6344 13.5471 22.75 12.8883 22.75 12C22.75 11.1117 22.6344 10.4529 22.3673 9.8484C22.1179 9.28391 21.7504 8.80652 21.3512 8.28818L21.3194 8.24686C19.5547 5.9542 16.5141 3.25 12 3.25ZM3.86922 9.1618C5.49864 7.04492 8.15036 4.75 12 4.75C15.8496 4.75 18.5014 7.04492 20.1308 9.1618C20.5694 9.73159 20.8263 10.0721 20.9952 10.4545C21.1532 10.812 21.25 11.2489 21.25 12C21.25 12.7511 21.1532 13.188 20.9952 13.5455C20.8263 13.9279 20.5694 14.2684 20.1308 14.8382C18.5014 16.9551 15.8496 19.25 12 19.25C8.15036 19.25 5.49864 16.9551 3.86922 14.8382C3.43064 14.2684 3.17374 13.9279 3.00476 13.5455C2.84684 13.188 2.75 12.7511 2.75 12C2.75 11.2489 2.84684 10.812 3.00476 10.4545C3.17374 10.0721 3.43063 9.73159 3.86922 9.1618Z"/>
@@ -125,7 +143,7 @@
                         <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:sticky last:right-0">04-09-2024</td>
                         <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:sticky last:right-0">07-09-2024</td>
                         <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:sticky last:right-0">
-                            <a href="laporanApedes.php" class="flex items-center gap-2 w-fit bg-[#5869EA] py-1.5 px-2 rounded-md mx-auto">
+                            <a href="laporanApedes.php" class="flex items-center gap-2 w-fit bg-primary py-1.5 px-2 rounded-md mx-auto">
                                 <svg class="w-4 fill-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.25C9.92893 8.25 8.25 9.92893 8.25 12C8.25 14.0711 9.92893 15.75 12 15.75C14.0711 15.75 15.75 14.0711 15.75 12C15.75 9.92893 14.0711 8.25 12 8.25ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.25C7.48587 3.25 4.44529 5.9542 2.68057 8.24686L2.64874 8.2882C2.24964 8.80653 1.88206 9.28392 1.63269 9.8484C1.36564 10.4529 1.25 11.1117 1.25 12C1.25 12.8883 1.36564 13.5471 1.63269 14.1516C1.88206 14.7161 2.24964 15.1935 2.64875 15.7118L2.68057 15.7531C4.44529 18.0458 7.48587 20.75 12 20.75C16.5141 20.75 19.5547 18.0458 21.3194 15.7531L21.3512 15.7118C21.7504 15.1935 22.1179 14.7161 22.3673 14.1516C22.6344 13.5471 22.75 12.8883 22.75 12C22.75 11.1117 22.6344 10.4529 22.3673 9.8484C22.1179 9.28391 21.7504 8.80652 21.3512 8.28818L21.3194 8.24686C19.5547 5.9542 16.5141 3.25 12 3.25ZM3.86922 9.1618C5.49864 7.04492 8.15036 4.75 12 4.75C15.8496 4.75 18.5014 7.04492 20.1308 9.1618C20.5694 9.73159 20.8263 10.0721 20.9952 10.4545C21.1532 10.812 21.25 11.2489 21.25 12C21.25 12.7511 21.1532 13.188 20.9952 13.5455C20.8263 13.9279 20.5694 14.2684 20.1308 14.8382C18.5014 16.9551 15.8496 19.25 12 19.25C8.15036 19.25 5.49864 16.9551 3.86922 14.8382C3.43064 14.2684 3.17374 13.9279 3.00476 13.5455C2.84684 13.188 2.75 12.7511 2.75 12C2.75 11.2489 2.84684 10.812 3.00476 10.4545C3.17374 10.0721 3.43063 9.73159 3.86922 9.1618Z"/>
@@ -138,19 +156,19 @@
             </section>
 
             <section class="flex justify-center items-center gap-3">
-                <button class="bg-[#5869EA] py-1.5 px-4 rounded-md md:rounded-lg">
+                <button class="bg-primary py-1.5 px-4 rounded-md md:rounded-lg">
                     <h1 class="text-[10px] md:text-sm text-white font-semibold">Sebelumnya</h1>
                 </button>
-                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-[#615EFC]">
-                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-[#615EFC] font-semibold">1</h1>
+                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-primary">
+                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-primary font-semibold">1</h1>
                 </button>
-                <button class="py-1 px-6 md:px-8 border-b border-[#615EFC]">
-                    <h1 class="text-[10px] md:text-sm text-[#615EFC] font-semibold">2</h1>
+                <button class="py-1 px-6 md:px-8 border-b border-primary">
+                    <h1 class="text-[10px] md:text-sm text-primary font-semibold">2</h1>
                 </button>
-                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-[#615EFC]">
-                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-[#615EFC] font-semibold">3</h1>
+                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-primary">
+                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-primary font-semibold">3</h1>
                 </button>
-                <button class="bg-[#5869EA] py-1.5 px-4 rounded-md md:rounded-lg">
+                <button class="bg-primary py-1.5 px-4 rounded-md md:rounded-lg">
                     <h1 class="text-[10px] md:text-sm text-white font-semibold">Selanjutnya</h1>
                 </button>
             </section>

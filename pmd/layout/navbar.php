@@ -26,21 +26,21 @@
                             </div>
                             <div class="px-3 pb-3 space-y-2">
                                 <div class="flex items-center gap-3 md:gap-4">
-                                    <button @click="tab = 1" :class="tab == 1 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
+                                    <button @click="tab = 1" :class="tab == 1 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
                                         <h1 class="text-[10px] md:text-xs  font-normal">Semua</h1>
                                     </button>
-                                    <button @click="tab = 2" :class="tab == 2 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="flex items-center gap-2 md:gap-3 p-2 transition-colors border-b-[1.5px]">
+                                    <button @click="tab = 2" :class="tab == 2 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="flex items-center gap-2 md:gap-3 p-2 transition-colors border-b-[1.5px]">
                                         <h1 class="text-[10px] md:text-xs font-normal">Belum dilihat</h1>
                                         <div class="bg-[#FF4E4E] py-0.5 px-[7px] rounded-full">
                                             <h1 class="text-[8px] md:text-[10px] text-white font-normal">4</h1>
                                         </div>
                                     </button>
-                                    <button @click="tab = 3" :class="tab == 3 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
+                                    <button @click="tab = 3" :class="tab == 3 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
                                         <h1 class="text-[10px] md:text-xs font-normal">Sudah dilihat</h1>
                                     </button>
                                 </div>
                                 <div class="flex justify-end items-center">
-                                    <button class="bg-[#6777EF] py-1.5 px-3 rounded md:rounded-md">
+                                    <button class="bg-primary py-1.5 px-3 rounded md:rounded-md">
                                         <h1 class="text-[10px] md:text-xs text-white font-normal">Tandai sudah dilihat</h1>
                                     </button>
                                 </div>
@@ -58,7 +58,7 @@
                                                 <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                             </div>
                                         </div>
-                                        <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                        <div class="bg-primary py-1 px-3.5 rounded">
                                             <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                         </div>
                                     </a>
@@ -73,7 +73,7 @@
                                                 <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                             </div>
                                         </div>
-                                        <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                        <div class="bg-primary py-1 px-3.5 rounded">
                                             <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                         </div>
                                     </a>
@@ -98,7 +98,7 @@
                                                 <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                             </div>
                                         </div>
-                                        <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                        <div class="bg-primary py-1 px-3.5 rounded">
                                             <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                         </div>
                                     </a>
@@ -113,7 +113,7 @@
                                                 <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                             </div>
                                         </div>
-                                        <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                        <div class="bg-primary py-1 px-3.5 rounded">
                                             <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                         </div>
                                     </a>
@@ -138,7 +138,7 @@
                                                 <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                             </div>
                                         </div>
-                                        <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                        <div class="bg-primary py-1 px-3.5 rounded">
                                             <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                         </div>
                                     </a>
@@ -153,7 +153,7 @@
                                                 <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                             </div>
                                         </div>
-                                        <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                        <div class="bg-primary py-1 px-3.5 rounded">
                                             <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                         </div>
                                     </a>
@@ -166,9 +166,9 @@
                                 </div>
                             </div>
                             <a href="/pmd/notifikasi.php" class="flex justify-center items-center gap-2 md:gap-3 py-2.5 px-4">
-                                <h1 class="text-xs md:text-sm text-[#615EFC] font-normal">Selengkapnya</h1>
-                                <svg class="w-1 md:w-1.5" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.941406 1.13574L2.19018 2.37342C3.18605 3.36044 3.68398 3.85395 3.76065 4.45546C3.77944 4.60284 3.77944 4.75198 3.76065 4.89935C3.68398 5.50086 3.18605 5.99438 2.19018 6.9814L0.941406 8.21908" stroke="#615EFC" stroke-width="1.5" stroke-linecap="round"/>
+                                <h1 class="text-xs md:text-sm text-primary font-normal">Selengkapnya</h1>
+                                <svg class="w-1 md:w-1.5 stroke-primary" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.941406 1.13574L2.19018 2.37342C3.18605 3.36044 3.68398 3.85395 3.76065 4.45546C3.77944 4.60284 3.77944 4.75198 3.76065 4.89935C3.68398 5.50086 3.18605 5.99438 2.19018 6.9814L0.941406 8.21908" stroke-width="1.5" stroke-linecap="round"/>
                                 </svg>
                             </a>
                         </div>
@@ -187,31 +187,31 @@
                     <div x-show="isOpen" @click.outside="isOpen = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': isOpen, 'hidden': !isOpen }" class="hidden w-max absolute right-0">
                         <div x-data="{ tab : 1, tabb : 1 }" class="grid w-60 sm:w-72 md:w-80 lg:w-96 bg-white rounded md:rounded-md shadow-lg shadow-black/20">
                             <div class="flex items-center gap-3 md:gap-4 py-3 px-4 border-b border-[#eaeaea]">
-                                <button @click="tab = 1" :class="tab == 1 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="p-1 transition-colors border-b-[1.5px]">
+                                <button @click="tab = 1" :class="tab == 1 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="p-1 transition-colors border-b-[1.5px]">
                                     <h1 class="text-xs md:text-sm font-normal">Inbox</h1>
                                 </button>
-                                <button @click="tab = 2" :class="tab == 2 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="p-1 transition-colors border-b-[1.5px]">
+                                <button @click="tab = 2" :class="tab == 2 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="p-1 transition-colors border-b-[1.5px]">
                                     <h1 class="text-xs md:text-sm font-normal">Outbox</h1>
                                 </button>
                             </div>
                             <div x-show="tab == 1">
                                 <div class="px-3 pb-3 space-y-2">
                                     <div class="flex items-center gap-3 md:gap-4">
-                                        <button @click="tabb = 1" :class="tabb == 1 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
+                                        <button @click="tabb = 1" :class="tabb == 1 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
                                             <h1 class="text-[10px] md:text-xs  font-normal">Semua</h1>
                                         </button>
-                                        <button @click="tabb = 2" :class="tabb == 2 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="flex items-center gap-2 md:gap-3 p-2 transition-colors border-b-[1.5px]">
+                                        <button @click="tabb = 2" :class="tabb == 2 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="flex items-center gap-2 md:gap-3 p-2 transition-colors border-b-[1.5px]">
                                             <h1 class="text-[10px] md:text-xs font-normal">Belum dilihat</h1>
                                             <div class="bg-[#FF4E4E] py-0.5 px-[7px] rounded-full">
                                                 <h1 class="text-[8px] md:text-[10px] text-white font-normal">4</h1>
                                             </div>
                                         </button>
-                                        <button @click="tabb = 3" :class="tabb == 3 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
+                                        <button @click="tabb = 3" :class="tabb == 3 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
                                             <h1 class="text-[10px] md:text-xs font-normal">Sudah dilihat</h1>
                                         </button>
                                     </div>
                                     <div class="flex justify-end items-center">
-                                        <button class="bg-[#6777EF] py-1.5 px-3 rounded md:rounded-md">
+                                        <button class="bg-primary py-1.5 px-3 rounded md:rounded-md">
                                             <h1 class="text-[10px] md:text-xs text-white font-normal">Tandai sudah dilihat</h1>
                                         </button>
                                     </div>
@@ -229,7 +229,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -244,7 +244,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -269,7 +269,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -284,7 +284,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -309,7 +309,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -324,7 +324,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -337,30 +337,30 @@
                                     </div>
                                 </div>
                                 <a href="/pmd/inbox.php" class="flex justify-center items-center gap-2 md:gap-3 py-2.5 px-4">
-                                    <h1 class="text-xs md:text-sm text-[#615EFC] font-normal">Selengkapnya</h1>
-                                    <svg class="w-1 md:w-1.5" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.941406 1.13574L2.19018 2.37342C3.18605 3.36044 3.68398 3.85395 3.76065 4.45546C3.77944 4.60284 3.77944 4.75198 3.76065 4.89935C3.68398 5.50086 3.18605 5.99438 2.19018 6.9814L0.941406 8.21908" stroke="#615EFC" stroke-width="1.5" stroke-linecap="round"/>
+                                    <h1 class="text-xs md:text-sm text-primary font-normal">Selengkapnya</h1>
+                                    <svg class="w-1 md:w-1.5 stroke-primary" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.941406 1.13574L2.19018 2.37342C3.18605 3.36044 3.68398 3.85395 3.76065 4.45546C3.77944 4.60284 3.77944 4.75198 3.76065 4.89935C3.68398 5.50086 3.18605 5.99438 2.19018 6.9814L0.941406 8.21908" stroke-width="1.5" stroke-linecap="round"/>
                                     </svg>
                                 </a>
                             </div>
                             <div x-show="tab == 2">
                                 <div class="px-3 pb-3 space-y-2">
                                     <div class="flex items-center gap-3 md:gap-4">
-                                        <button @click="tabb = 1" :class="tabb == 1 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
+                                        <button @click="tabb = 1" :class="tabb == 1 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
                                             <h1 class="text-[10px] md:text-xs  font-normal">Semua</h1>
                                         </button>
-                                        <button @click="tabb = 2" :class="tabb == 2 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="flex items-center gap-2 md:gap-3 p-2 transition-colors border-b-[1.5px]">
+                                        <button @click="tabb = 2" :class="tabb == 2 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="flex items-center gap-2 md:gap-3 p-2 transition-colors border-b-[1.5px]">
                                             <h1 class="text-[10px] md:text-xs font-normal">Belum dilihat</h1>
                                             <div class="bg-[#FF4E4E] py-0.5 px-[7px] rounded-full">
                                                 <h1 class="text-[8px] md:text-[10px] text-white font-normal">4</h1>
                                             </div>
                                         </button>
-                                        <button @click="tabb = 3" :class="tabb == 3 ? 'border-[#615EFC] text-[#615EFC]' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
+                                        <button @click="tabb = 3" :class="tabb == 3 ? 'border-primary text-primary' : 'border-white text-[#B4B4B4]'" class="p-2 transition-colors border-b-[1.5px]">
                                             <h1 class="text-[10px] md:text-xs font-normal">Sudah dilihat</h1>
                                         </button>
                                     </div>
                                     <div class="flex justify-end items-center">
-                                        <button class="bg-[#6777EF] py-1.5 px-3 rounded md:rounded-md">
+                                        <button class="bg-primary py-1.5 px-3 rounded md:rounded-md">
                                             <h1 class="text-[10px] md:text-xs text-white font-normal">Tandai sudah dilihat</h1>
                                         </button>
                                     </div>
@@ -378,7 +378,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -393,7 +393,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -418,7 +418,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -433,7 +433,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -458,7 +458,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -473,7 +473,7 @@
                                                     <h1 class="text-[8px] md:text-[10px] text-[#B4B4B4] font-normal">Baru saja</h1>
                                                 </div>
                                             </div>
-                                            <div class="bg-[#5C64FC] py-1 px-3.5 rounded">
+                                            <div class="bg-primary py-1 px-3.5 rounded">
                                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Cek</h1>
                                             </div>
                                         </a>
@@ -486,9 +486,9 @@
                                     </div>
                                 </div>
                                 <a href="/pmd/outbox.php" class="flex justify-center items-center gap-2 md:gap-3 py-2.5 px-4">
-                                    <h1 class="text-xs md:text-sm text-[#615EFC] font-normal">Selengkapnya</h1>
-                                    <svg class="w-1 md:w-1.5" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.941406 1.13574L2.19018 2.37342C3.18605 3.36044 3.68398 3.85395 3.76065 4.45546C3.77944 4.60284 3.77944 4.75198 3.76065 4.89935C3.68398 5.50086 3.18605 5.99438 2.19018 6.9814L0.941406 8.21908" stroke="#615EFC" stroke-width="1.5" stroke-linecap="round"/>
+                                    <h1 class="text-xs md:text-sm text-primary font-normal">Selengkapnya</h1>
+                                    <svg class="w-1 md:w-1.5 stroke-primary" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.941406 1.13574L2.19018 2.37342C3.18605 3.36044 3.68398 3.85395 3.76065 4.45546C3.77944 4.60284 3.77944 4.75198 3.76065 4.89935C3.68398 5.50086 3.18605 5.99438 2.19018 6.9814L0.941406 8.21908" stroke-width="1.5" stroke-linecap="round"/>
                                     </svg>
                                 </a>
                             </div>
@@ -525,13 +525,15 @@
                             </button>
                         </a>
                         <div class="border-b-[0.5px] border-[#E6E6E6]"></div>
-                        <button class="flex items-center gap-2 md:gap-3">
-                            <svg class="w-2 md:w-2.5 fill-[#FF4E4E]" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.16877 0.718752C7.63028 0.718716 7.9114 0.718693 8.15389 0.7571C9.4866 0.96818 10.5318 2.0134 10.7429 3.34611C10.7813 3.5886 10.7813 3.86972 10.7812 4.33123L10.7812 7.66878C10.7813 8.13029 10.7813 8.41141 10.7429 8.6539C10.5318 9.98661 9.4866 11.0318 8.15389 11.2429C7.9114 11.2813 7.63028 11.2813 7.16876 11.2813L6.58333 11.2813C5.88264 11.2813 5.23493 11.0494 4.71434 10.6584C4.53495 10.5236 4.49876 10.2689 4.6335 10.0896C4.76825 9.91016 5.02292 9.87396 5.20231 10.0087C5.58703 10.2977 6.06461 10.4688 6.58333 10.4688H7.125C7.64373 10.4688 7.8558 10.4675 8.02679 10.4404C9.01183 10.2844 9.78439 9.51184 9.9404 8.5268C9.96748 8.35581 9.96875 8.14374 9.96875 7.625L9.96875 4.375C9.96875 3.85627 9.96748 3.6442 9.9404 3.47321C9.78439 2.48817 9.01183 1.71561 8.02679 1.5596C7.8558 1.53252 7.64373 1.53125 7.125 1.53125H6.58333C6.06461 1.53125 5.58703 1.70233 5.20231 1.9913C5.02292 2.12605 4.76825 2.08985 4.6335 1.91046C4.49876 1.73106 4.53495 1.4764 4.71434 1.34165C5.23493 0.950623 5.88264 0.718755 6.58333 0.718755L7.16877 0.718752Z"/>
-                                <path d="M2.53926 3.51501C2.71507 3.37561 2.97059 3.40513 3.10999 3.58094C3.24939 3.75675 3.21987 4.01227 3.04406 4.15167L2.08912 4.90883C1.70777 5.2112 1.44669 5.41898 1.26932 5.59376L8.20833 5.59375C8.43269 5.59375 8.61458 5.77564 8.61458 6C8.61458 6.22437 8.43269 6.40625 8.20833 6.40625L1.26932 6.40626C1.44669 6.58103 1.70778 6.78881 2.08912 7.09118L3.04406 7.84834C3.21987 7.98774 3.24939 8.24326 3.10999 8.41907C2.9706 8.59488 2.71507 8.6244 2.53926 8.485L1.56493 7.71246C1.20066 7.42365 0.900078 7.18533 0.685946 6.97202C0.466205 6.75313 0.284047 6.51017 0.234581 6.1997C0.224043 6.13356 0.218746 6.06684 0.218746 6.00001C0.218746 5.93317 0.224043 5.86645 0.234581 5.80031C0.284047 5.48984 0.466205 5.24688 0.685944 5.02799C0.900075 4.81468 1.20065 4.57637 1.56492 4.28756L2.53926 3.51501Z"/>
-                            </svg>       
-                            <h1 class="text-[10px] md:text-xs text-[#FF5555] font-medium">Keluar</h1>
-                        </button>
+                        <a href="/index.php">
+                            <button class="flex items-center gap-2 md:gap-3">
+                                <svg class="w-2 md:w-2.5 fill-[#FF4E4E]" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.16877 0.718752C7.63028 0.718716 7.9114 0.718693 8.15389 0.7571C9.4866 0.96818 10.5318 2.0134 10.7429 3.34611C10.7813 3.5886 10.7813 3.86972 10.7812 4.33123L10.7812 7.66878C10.7813 8.13029 10.7813 8.41141 10.7429 8.6539C10.5318 9.98661 9.4866 11.0318 8.15389 11.2429C7.9114 11.2813 7.63028 11.2813 7.16876 11.2813L6.58333 11.2813C5.88264 11.2813 5.23493 11.0494 4.71434 10.6584C4.53495 10.5236 4.49876 10.2689 4.6335 10.0896C4.76825 9.91016 5.02292 9.87396 5.20231 10.0087C5.58703 10.2977 6.06461 10.4688 6.58333 10.4688H7.125C7.64373 10.4688 7.8558 10.4675 8.02679 10.4404C9.01183 10.2844 9.78439 9.51184 9.9404 8.5268C9.96748 8.35581 9.96875 8.14374 9.96875 7.625L9.96875 4.375C9.96875 3.85627 9.96748 3.6442 9.9404 3.47321C9.78439 2.48817 9.01183 1.71561 8.02679 1.5596C7.8558 1.53252 7.64373 1.53125 7.125 1.53125H6.58333C6.06461 1.53125 5.58703 1.70233 5.20231 1.9913C5.02292 2.12605 4.76825 2.08985 4.6335 1.91046C4.49876 1.73106 4.53495 1.4764 4.71434 1.34165C5.23493 0.950623 5.88264 0.718755 6.58333 0.718755L7.16877 0.718752Z"/>
+                                    <path d="M2.53926 3.51501C2.71507 3.37561 2.97059 3.40513 3.10999 3.58094C3.24939 3.75675 3.21987 4.01227 3.04406 4.15167L2.08912 4.90883C1.70777 5.2112 1.44669 5.41898 1.26932 5.59376L8.20833 5.59375C8.43269 5.59375 8.61458 5.77564 8.61458 6C8.61458 6.22437 8.43269 6.40625 8.20833 6.40625L1.26932 6.40626C1.44669 6.58103 1.70778 6.78881 2.08912 7.09118L3.04406 7.84834C3.21987 7.98774 3.24939 8.24326 3.10999 8.41907C2.9706 8.59488 2.71507 8.6244 2.53926 8.485L1.56493 7.71246C1.20066 7.42365 0.900078 7.18533 0.685946 6.97202C0.466205 6.75313 0.284047 6.51017 0.234581 6.1997C0.224043 6.13356 0.218746 6.06684 0.218746 6.00001C0.218746 5.93317 0.224043 5.86645 0.234581 5.80031C0.284047 5.48984 0.466205 5.24688 0.685944 5.02799C0.900075 4.81468 1.20065 4.57637 1.56492 4.28756L2.53926 3.51501Z"/>
+                                </svg>
+                                <h1 class="text-[10px] md:text-xs text-[#FF5555] font-medium">Keluar</h1>
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <div x-data="{ notif : false }" x-show="notif" :class="{ 'block': notif, 'hidden': !notif }" class="hidden w-max absolute right-0">

@@ -5,7 +5,7 @@
     <main :class="isOpenn ? 'md:ml-60' : 'md:ml-20 ' + 'transition-all duration-500'" class="relative md:ml-60 pt-16 p-5 space-y-5">
         <div class="flex justify-between items-center">
             <h1 class="text-base md:text-lg lg:text-xl text-black font-medium">Management Evaluasi</h1>
-            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-[#615EFC] font-medium">Home</span> / Management Evaluasi</h1>
+            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-primary font-medium">Home</span> / Management Evaluasi</h1>
         </div>
 
         <div x-data="{ selected : null, isOpen : false }" class="space-y-1">
@@ -13,7 +13,7 @@
             <div class="w-full md:w-52 relative space-y-2">
                 <button @click="isOpen = !isOpen" class="w-full flex justify-between items-center gap-2 bg-white py-1.5 px-4 rounded md:rounded-md shadow-md shadow-[#00000014] focus:outline-none focus:ring-0">
                     <h1 x-text="selected ? selected : 'Evaluasi'" class="text-xs md:text-sm text-[#313131] font-normal"></h1>
-                    <svg class="w-3 fill-[#615EFC]" viewBox="0 0 12 6" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-3 fill-primary" viewBox="0 0 12 6" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.5327 1.52796C11.8243 1.23376 11.8222 0.758893 11.528 0.467309C11.2338 0.175726 10.7589 0.177844 10.4673 0.472041L8.72 2.23501C8.01086 2.9505 7.52282 3.44131 7.1093 3.77341C6.7076 4.096 6.44958 4.20668 6.2185 4.23613C6.07341 4.25462 5.92659 4.25462 5.7815 4.23613C5.55042 4.20668 5.2924 4.09601 4.89071 3.77341C4.47718 3.44131 3.98914 2.95051 3.28 2.23501L1.53269 0.472042C1.24111 0.177845 0.766238 0.175726 0.472041 0.46731C0.177844 0.758894 0.175726 1.23376 0.467309 1.52796L2.24609 3.32269C2.91604 3.99866 3.46359 4.55114 3.95146 4.94294C4.45879 5.35037 4.97373 5.64531 5.59184 5.72409C5.86287 5.75864 6.13714 5.75864 6.40816 5.72409C7.02628 5.64531 7.54122 5.35037 8.04854 4.94294C8.53641 4.55114 9.08396 3.99867 9.7539 3.32269L11.5327 1.52796Z"/>
                     </svg>  
                 </button>
@@ -21,7 +21,7 @@
                     <template x-for="(option, index) in ['Evaluasi RPJMDES', 'Evaluasi RKPDES', 'Evaluasi APEDES']" :key="index">
                         <div @click="selected = option; isOpen = false" class="flex justify-between items-center gap-2 py-1.5 px-4 cursor-pointer rounded md:rounded-md">
                             <h1 x-text="option" class="text-xs md:text-sm text-[#313131] font-normal"></h1>
-                            <svg x-show="selected === option" class="w-5 stroke-[#615EFC]" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg x-show="selected === option" class="w-5 stroke-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                             </svg>
                         </div>
@@ -190,7 +190,7 @@
                                     <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                     </button>
-                                    <button @click="() => { hapusAll(); modal = false; }" @click="modal = false" class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                    <button @click="() => { hapusAll(); modal = false; }" @click="modal = false" class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Yakin</h1>
                                     </button>
                                 </div>
@@ -199,7 +199,7 @@
                     </div>
                 </div>
                 <div x-data="{ modal : false }">
-                    <button @click="modal = !modal" class="bg-[#615EFC] py-1.5 px-4 rounded md:rounded-md">
+                    <button @click="modal = !modal" class="bg-primary py-1.5 px-4 rounded md:rounded-md">
                         <h1 class="text-[10px] md:text-xs text-white font-medium">Simpan</h1>
                     </button>
                     <div x-show="modal" x-transition.duration.300ms.opacity.50 :class="{ 'visible': modal, 'invisible': !modal }" class="invisible fixed inset-0 z-50 bg-[#0000006E] flex items-center justify-center h-screen">
@@ -219,7 +219,7 @@
                                     <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Periksa</h1>
                                     </button>
-                                    <button @click="() => { hapusAll(); modal = false; }" @click="modal = false" class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                    <button @click="() => { hapusAll(); modal = false; }" @click="modal = false" class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Simpan</h1>
                                     </button>
                                 </div>
@@ -228,7 +228,7 @@
                     </div>
                 </div>
                 <button @click="addmenu()" class="bg-white py-1.5 px-4 rounded md:rounded-md">
-                    <h1 class="text-xs md:text-sm text-gray-500 font-normal">Tambah Evaluasi</h1>
+                    <h1 class="text-[10px] md:text-xs text-gray-500 font-normal">Tambah Evaluasi</h1>
                 </button>
             </div>
         </div>

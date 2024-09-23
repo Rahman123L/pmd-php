@@ -1,11 +1,11 @@
 <div x-show="window.innerWidth < 640 && isOpen" x-transition.opacity :class="{ 'block': isOpen, 'hidden': !isOpen }" class="hidden fixed inset-0 bg-zinc-800 bg-opacity-80 z-40"></div>
 <div x-data="{ isOpenn : true }">
-    <?php include_once("../pmd/layout/sidebar.php"); ?>
+    <?php include_once("../desa/layout/sidebar.php"); ?>
 
     <main :class="isOpenn ? 'md:ml-60' : 'md:ml-20 ' + 'transition-all duration-500'" class="relative md:ml-60 pt-16 p-5 space-y-5">
         <div class="flex justify-between items-center">
             <h1 class="text-base md:text-lg lg:text-xl text-black font-medium">Inbox</h1>
-            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-[#615EFC] font-medium">Home</span> / Inbox</h1>
+            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-primary font-medium">Home</span> / Inbox</h1>
         </div>
 
         <div class="grid w-full divide-y-[1.5px] bg-white rounded md:rounded-md shadow-md shadow-black/20">
@@ -98,7 +98,7 @@
                                         <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                             <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                         </button>
-                                        <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                        <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                             <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Konfirmasi</h1>
                                         </button>
                                     </div>
@@ -115,8 +115,8 @@
                         <div class="px-1.5 border-b border-white cursor-pointer">
                             <h1 class="text-[10px] md:text-xs text-black font-normal">1</h1>
                         </div>
-                        <div class="px-1.5 border-b border-[#615EFC] cursor-pointer">
-                            <h1 class="text-[10px] md:text-xs text-[#615EFC] font-normal">2</h1>
+                        <div class="px-1.5 border-b border-primary cursor-pointer">
+                            <h1 class="text-[10px] md:text-xs text-primary font-normal">2</h1>
                         </div>
                         <div class="px-1.5 border-b border-white cursor-pointer">
                             <h1 class="text-[10px] md:text-xs text-black font-normal">3</h1>
@@ -168,10 +168,10 @@
                 <div class="col-span-1 lg:col-span-3 space-y-1.5">
                     <p class="text-[10px] md:text-xs text-black font-normal">Halo admin tolong acc akun saya</p>
                     <div class="flex items-center gap-2">
-                        <svg class="w-3 fill-[#615EFC]" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-3 fill-primary" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.0064 1.01251C11.161 0.826892 11.136 0.55102 10.9503 0.396336C10.7647 0.241652 10.4888 0.266731 10.3342 0.452352L7.1896 4.22583C6.55795 4.98381 6.1136 5.51538 5.72819 5.8634C5.35177 6.20331 5.09199 6.31135 4.83693 6.31135C4.58186 6.31135 4.32208 6.20331 3.94566 5.8634C3.56025 5.51538 3.1159 4.98381 2.48425 4.22582L1.67302 3.25235C1.51834 3.06673 1.24247 3.04165 1.05684 3.19634C0.871223 3.35102 0.846144 3.62689 1.00083 3.81251L1.83457 4.813C2.43848 5.53771 2.92211 6.11809 3.35924 6.51281C3.81077 6.92055 4.27234 7.18634 4.83693 7.18634C5.40151 7.18634 5.86308 6.92055 6.31461 6.51282C6.75174 6.11809 7.23536 5.53772 7.83927 4.81302L11.0064 1.01251Z"/>
                         </svg>
-                        <h1 class="text-[8px] md:text-[10px] text-[#615EFC] font-normal">Sudah dilihat admin</h1>
+                        <h1 class="text-[8px] md:text-[10px] text-primary font-normal">Sudah dilihat admin</h1>
                     </div>
                 </div>
                 <h1 class="col-span-1 lg:col-span-1 text-[10px] md:text-xs text-black font-normal">22 September</h1>

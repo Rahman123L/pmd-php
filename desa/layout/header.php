@@ -20,6 +20,10 @@
         darkMode: "class",
         theme: {
             extend: {
+                colors: {
+                    primary: '#075E54',
+                    secondary: '#EFC118',
+                },
                 keyframes: {
                     fadeIn: {
                         '0%': { opacity: 0 },
@@ -35,4 +39,4 @@
     </script>
 </head>
 
-<body x-data="{ isOpen : window.innerWidth >= 786 }" @resize.window="isOpen = window.innerWidth >= 786" class="bg-[#F2F8FF]">
+<body x-data="{ isOpen : window.innerWidth >= 786 }" @resize.window="isOpen = window.innerWidth >= 786" class="bg-[#ECE5DD]">

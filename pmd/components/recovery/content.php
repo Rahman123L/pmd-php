@@ -5,7 +5,7 @@
     <main :class="isOpenn ? 'md:ml-60' : 'md:ml-20 ' + 'transition-all duration-500'" class="relative md:ml-60 pt-16 p-5 space-y-5">
         <div class="flex justify-between items-center">
             <h1 class="text-base md:text-lg lg:text-xl text-black font-medium">Recovery</h1>
-            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-[#615EFC] font-medium">Home</span> / Recovery</h1>
+            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-primary font-medium">Home</span> / Recovery</h1>
         </div>
 
         <section class="space-y-3">
@@ -113,7 +113,7 @@
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                                     </button>
                                                     <div x-data="{ modal : false }">
-                                                        <button type="button" @click="if (password === konfirmasi) { modal = !modal; cekPassword = false; } else { cekPassword = true; }" :class="{ 'bg-[#615EFC] text-white cursor-pointer' : username && password && konfirmasi, 'bg-[#979696] text-[#6A6A6A] cursor-not-allowed' : !(username && password && konfirmasi) }" :disabled="!(passwordLama && password && konfirmasi)" class="py-1.5 px-4 md:px-5 rounded transition-colors duration-500">
+                                                        <button type="button" @click="if (password === konfirmasi) { modal = !modal; cekPassword = false; } else { cekPassword = true; }" :class="{ 'bg-primary text-white cursor-pointer' : username && password && konfirmasi, 'bg-[#979696] text-[#6A6A6A] cursor-not-allowed' : !(username && password && konfirmasi) }" :disabled="!(passwordLama && password && konfirmasi)" class="py-1.5 px-4 md:px-5 rounded transition-colors duration-500">
                                                             <h1 class="text-[10px] md:text-xs font-medium uppercase">Simpan</h1>
                                                         </button>
                                                         <div x-show="modal" x-transition.duration.300ms.opacity.50 class="fixed inset-0 z-50 bg-[#0000006E] flex items-center justify-center h-screen">
@@ -133,7 +133,7 @@
                                                                         <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                                                             <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Periksa</h1>
                                                                         </button>
-                                                                        <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                                                        <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                                                             <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Simpan</h1>
                                                                         </button>
                                                                     </div>
@@ -232,7 +232,7 @@
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                                     </button>
                                                     <div x-data="{ modal : false }">
-                                                        <button type="button" @click="if (password === konfirmasi) { modal = !modal; cekPassword = false; } else { cekPassword = true; }" :class="{ 'bg-[#615EFC] text-white cursor-pointer' : username && password && konfirmasi, 'bg-[#979696] text-[#6A6A6A] cursor-not-allowed' : !(username && password && konfirmasi) }" :disabled="!(passwordLama && password && konfirmasi)" class="py-1.5 px-4 md:px-5 rounded transition-colors duration-500">
+                                                        <button type="button" @click="if (password === konfirmasi) { modal = !modal; cekPassword = false; } else { cekPassword = true; }" :class="{ 'bg-primary text-white cursor-pointer' : username && password && konfirmasi, 'bg-[#979696] text-[#6A6A6A] cursor-not-allowed' : !(username && password && konfirmasi) }" :disabled="!(passwordLama && password && konfirmasi)" class="py-1.5 px-4 md:px-5 rounded transition-colors duration-500">
                                                             <h1 class="text-[10px] md:text-xs font-medium uppercase">Simpan</h1>
                                                         </button>
                                                         <div x-show="modal" x-transition.duration.300ms.opacity.50 class="fixed inset-0 z-50 bg-[#0000006E] flex items-center justify-center h-screen">
@@ -252,7 +252,7 @@
                                                                         <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                                                             <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Periksa</h1>
                                                                         </button>
-                                                                        <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                                                        <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                                                             <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Simpan</h1>
                                                                         </button>
                                                                     </div>
@@ -351,7 +351,7 @@
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                                     </button>
                                                     <div x-data="{ modal : false }">
-                                                        <button type="button" @click="if (password === konfirmasi) { modal = !modal; cekPassword = false; } else { cekPassword = true; }" :class="{ 'bg-[#615EFC] text-white cursor-pointer' : username && password && konfirmasi, 'bg-[#979696] text-[#6A6A6A] cursor-not-allowed' : !(username && password && konfirmasi) }" :disabled="!(passwordLama && password && konfirmasi)" class="py-1.5 px-4 md:px-5 rounded transition-colors duration-500">
+                                                        <button type="button" @click="if (password === konfirmasi) { modal = !modal; cekPassword = false; } else { cekPassword = true; }" :class="{ 'bg-primary text-white cursor-pointer' : username && password && konfirmasi, 'bg-[#979696] text-[#6A6A6A] cursor-not-allowed' : !(username && password && konfirmasi) }" :disabled="!(passwordLama && password && konfirmasi)" class="py-1.5 px-4 md:px-5 rounded transition-colors duration-500">
                                                             <h1 class="text-[10px] md:text-xs font-medium uppercase">Simpan</h1>
                                                         </button>
                                                         <div x-show="modal" x-transition.duration.300ms.opacity.50 class="fixed inset-0 z-50 bg-[#0000006E] flex items-center justify-center h-screen">
@@ -371,7 +371,7 @@
                                                                         <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                                                             <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Periksa</h1>
                                                                         </button>
-                                                                        <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                                                        <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                                                             <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Simpan</h1>
                                                                         </button>
                                                                     </div>
@@ -391,19 +391,19 @@
             </section>
 
             <section class="flex justify-center items-center gap-3">
-                <button class="bg-[#5869EA] py-1.5 px-4 rounded-md md:rounded-lg">
+                <button class="bg-primary py-1.5 px-4 rounded-md md:rounded-lg">
                     <h1 class="text-[10px] md:text-sm text-white font-semibold">Sebelumnya</h1>
                 </button>
-                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-[#615EFC]">
-                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-[#615EFC] font-semibold">1</h1>
+                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-primary">
+                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-primary font-semibold">1</h1>
                 </button>
-                <button class="py-1 px-6 md:px-8 border-b border-[#615EFC]">
-                    <h1 class="text-[10px] md:text-sm text-[#615EFC] font-semibold">2</h1>
+                <button class="py-1 px-6 md:px-8 border-b border-primary">
+                    <h1 class="text-[10px] md:text-sm text-primary font-semibold">2</h1>
                 </button>
-                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-[#615EFC]">
-                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-[#615EFC] font-semibold">3</h1>
+                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-primary">
+                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-primary font-semibold">3</h1>
                 </button>
-                <button class="bg-[#5869EA] py-1.5 px-4 rounded-md md:rounded-lg">
+                <button class="bg-primary py-1.5 px-4 rounded-md md:rounded-lg">
                     <h1 class="text-[10px] md:text-sm text-white font-semibold">Selanjutnya</h1>
                 </button>
             </section>

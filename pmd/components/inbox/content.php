@@ -5,7 +5,7 @@
     <main :class="isOpenn ? 'md:ml-60' : 'md:ml-20 ' + 'transition-all duration-500'" class="relative md:ml-60 pt-16 p-5 space-y-5">
         <div class="flex justify-between items-center">
             <h1 class="text-base md:text-lg lg:text-xl text-black font-medium">Inbox</h1>
-            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-[#615EFC] font-medium">Home</span> / Inbox</h1>
+            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-primary font-medium">Home</span> / Inbox</h1>
         </div>
 
         <div class="grid w-full divide-y-[1.5px] bg-white rounded md:rounded-md shadow-md shadow-black/20">
@@ -98,7 +98,7 @@
                                         <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                             <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                         </button>
-                                        <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                        <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                             <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Konfirmasi</h1>
                                         </button>
                                     </div>
@@ -115,8 +115,8 @@
                         <div class="px-1.5 border-b border-white cursor-pointer">
                             <h1 class="text-[10px] md:text-xs text-black font-normal">1</h1>
                         </div>
-                        <div class="px-1.5 border-b border-[#615EFC] cursor-pointer">
-                            <h1 class="text-[10px] md:text-xs text-[#615EFC] font-normal">2</h1>
+                        <div class="px-1.5 border-b border-primary cursor-pointer">
+                            <h1 class="text-[10px] md:text-xs text-primary font-normal">2</h1>
                         </div>
                         <div class="px-1.5 border-b border-white cursor-pointer">
                             <h1 class="text-[10px] md:text-xs text-black font-normal">3</h1>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="col-span-1 lg:col-span-3 space-y-1.5">
                     <p class="text-[10px] md:text-xs text-black font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consequatur magni voluptates necessitatibus quos quae.</p>
-                    <div class="w-fit bg-[#615EFC] py-1.5 px-4 rounded md:rounded-md">
+                    <div class="w-fit bg-primary py-1.5 px-4 rounded md:rounded-md">
                         <h1 class="text-[8px] md:text-[10px] text-white font-normal">Tandai sudah dilihat</h1>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                 </div>
                 <div class="col-span-1 lg:col-span-3 space-y-1.5">
                     <p class="text-[10px] md:text-xs text-black font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consequatur magni voluptates necessitatibus quos quae.</p>
-                    <div class="w-fit bg-[#615EFC] py-1.5 px-4 rounded md:rounded-md">
+                    <div class="w-fit bg-primary py-1.5 px-4 rounded md:rounded-md">
                         <h1 class="text-[8px] md:text-[10px] text-white font-normal">Tandai sudah dilihat</h1>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="col-span-1 lg:col-span-3 space-y-1.5">
                     <p class="text-[10px] md:text-xs text-black font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consequatur magni voluptates necessitatibus quos quae.</p>
-                    <div class="w-fit bg-[#615EFC] py-1.5 px-4 rounded md:rounded-md">
+                    <div class="w-fit bg-primary py-1.5 px-4 rounded md:rounded-md">
                         <h1 class="text-[8px] md:text-[10px] text-white font-normal">Tandai sudah dilihat</h1>
                     </div>
                 </div>

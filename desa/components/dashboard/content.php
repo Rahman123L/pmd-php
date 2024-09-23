@@ -5,7 +5,7 @@
     <main :class="isOpenn ? 'md:ml-60' : 'md:ml-20 ' + 'transition-all duration-500'" class="relative md:ml-60 pt-16 p-5 space-y-5">
         <div class="flex justify-between items-center">
             <h1 class="text-base md:text-lg lg:text-xl text-black font-medium">Dashboard</h1>
-            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-[#615EFC] font-medium">Home</span> / Dashboard</h1>
+            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-primary font-medium">Home</span> / Dashboard</h1>
         </div>
 
         <section class="flex items-center gap-2 md:gap-3">
@@ -30,11 +30,11 @@
                     <canvas id="chartLine"></canvas>
                     <div class="flex items-center gap-5 md:gap-10">
                         <div class="flex items-center gap-3">
-                            <div class="bg-[#5D87FF] p-2 md:p-2.5"></div>
+                            <div class="bg-primary p-2 md:p-2.5"></div>
                             <h1 class="text-[10px] md:text-xs text-black font-normal">Laki - laki</h1>
                         </div>
                         <div class="flex items-center gap-3">
-                            <div class="bg-[#FF5DDC] p-2 md:p-2.5"></div>
+                            <div class="bg-secondary p-2 md:p-2.5"></div>
                             <h1 class="text-[10px] md:text-xs text-black font-normal">Perempuan</h1>
                         </div>
                     </div>
@@ -47,10 +47,10 @@
                         <div class="space-y-2">
                             <h1 class="text-[10px] md:text-xs text-[#8B8B8B] font-normal">Usia 1-10</h1>
                             <div class="w-full flex justify-center items-center bg-slate-100 rounded-full h-2">
-                                <div class="w-[60%] bg-[#5D87FF] py-0.5 text-center rounded-l-full">
+                                <div class="w-[60%] bg-primary py-0.5 text-center rounded-l-full">
                                     <h1 class="text-[8px] md:text-[10px] text-white font-normal">1.400 jiwa</h1>
                                 </div>
-                                <div class="w-[40%] bg-[#FF5DDC] py-0.5 text-center rounded-r-full">
+                                <div class="w-[40%] bg-secondary py-0.5 text-center rounded-r-full">
                                     <h1 class="text-[8px] md:text-[10px] text-white font-normal">1.400 jiwa</h1>
                                 </div>
                             </div>
@@ -58,10 +58,10 @@
                         <div class="space-y-2">
                             <h1 class="text-[10px] md:text-xs text-[#8B8B8B] font-normal">Usia 11-20</h1>
                             <div class="w-full flex justify-center items-center bg-slate-100 rounded-full h-2">
-                                <div class="w-[70%] bg-[#5D87FF] py-0.5 text-center rounded-l-full">
+                                <div class="w-[70%] bg-primary py-0.5 text-center rounded-l-full">
                                     <h1 class="text-[8px] md:text-[10px] text-white font-normal">1.400 jiwa</h1>
                                 </div>
-                                <div class="w-[30%] bg-[#FF5DDC] py-0.5 text-center rounded-r-full">
+                                <div class="w-[30%] bg-secondary py-0.5 text-center rounded-r-full">
                                     <h1 class="text-[8px] md:text-[10px] text-white font-normal">1.400 jiwa</h1>
                                 </div>
                             </div>
@@ -69,10 +69,10 @@
                         <div class="space-y-2">
                             <h1 class="text-[10px] md:text-xs text-[#8B8B8B] font-normal">Usia 21-30</h1>
                             <div class="w-full flex justify-center items-center bg-slate-100 rounded-full h-2">
-                                <div class="w-[40%] bg-[#5D87FF] py-0.5 text-center rounded-l-full">
+                                <div class="w-[40%] bg-primary py-0.5 text-center rounded-l-full">
                                     <h1 class="text-[8px] md:text-[10px] text-white font-normal">1.400 jiwa</h1>
                                 </div>
-                                <div class="w-[60%] bg-[#FF5DDC] py-0.5 text-center rounded-r-full">
+                                <div class="w-[60%] bg-secondary py-0.5 text-center rounded-r-full">
                                     <h1 class="text-[8px] md:text-[10px] text-white font-normal">1.400 jiwa</h1>
                                 </div>
                             </div>
@@ -80,10 +80,10 @@
                         <div class="space-y-2">
                             <h1 class="text-[10px] md:text-xs text-[#8B8B8B] font-normal">Usia 30-55</h1>
                             <div class="w-full flex justify-center items-center bg-slate-100 rounded-full h-2">
-                                <div class="w-[50%] bg-[#5D87FF] py-0.5 text-center rounded-l-full">
+                                <div class="w-[50%] bg-primary py-0.5 text-center rounded-l-full">
                                     <h1 class="text-[8px] md:text-[10px] text-white font-normal">1.400 jiwa</h1>
                                 </div>
-                                <div class="w-[50%] bg-[#FF5DDC] py-0.5 text-center rounded-r-full">
+                                <div class="w-[50%] bg-secondary py-0.5 text-center rounded-r-full">
                                     <h1 class="text-[8px] md:text-[10px] text-white font-normal">1.400 jiwa</h1>
                                 </div>
                             </div>
@@ -91,10 +91,10 @@
                         <div class="space-y-2">
                             <h1 class="text-[10px] md:text-xs text-[#8B8B8B] font-normal">Lansia</h1>
                             <div class="w-full flex justify-center items-center bg-slate-100 rounded-full h-2">
-                                <div class="w-[50%] bg-[#5D87FF] py-0.5 text-center rounded-l-full">
+                                <div class="w-[50%] bg-primary py-0.5 text-center rounded-l-full">
                                     <h1 class="text-[8px] md:text-[10px] text-white font-normal">1.400 jiwa</h1>
                                 </div>
-                                <div class="w-[50%] bg-[#FF5DDC] py-0.5 text-center rounded-r-full">
+                                <div class="w-[50%] bg-secondary py-0.5 text-center rounded-r-full">
                                     <h1 class="text-[8px] md:text-[10px] text-white font-normal">1.400 jiwa</h1>
                                 </div>
                             </div>
@@ -102,18 +102,18 @@
                     </div>
                     <div class="flex items-center gap-5 md:gap-10 pt-2">
                         <div class="flex items-center gap-3">
-                            <div class="bg-[#5D87FF] p-2 md:p-2.5"></div>
+                            <div class="bg-primary p-2 md:p-2.5"></div>
                             <h1 class="text-[10px] md:text-xs text-black font-normal">Laki - laki</h1>
                         </div>
                         <div class="flex items-center gap-3">
-                            <div class="bg-[#FF5DDC] p-2 md:p-2.5"></div>
+                            <div class="bg-secondary p-2 md:p-2.5"></div>
                             <h1 class="text-[10px] md:text-xs text-black font-normal">Perempuan</h1>
                         </div>
                     </div>
                 </div>
                 <div class="flex justify-center items-center gap-2 md:gap-3 bg-white py-2 md:py-2.5 rounded md:rounded-md">
-                    <h1 class="text-xs md:text-sm text-[#615EFC] font-normal">Lihat Data Lengkap</h1>
-                    <svg class="w-1 md:w-1.5 stroke-[#615EFC] stroke-[1.5]" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <h1 class="text-xs md:text-sm text-primary font-normal">Lihat Data Lengkap</h1>
+                    <svg class="w-1 md:w-1.5 stroke-primary stroke-[1.5]" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1.5L2.76297 3.24731C4.1689 4.64075 4.87187 5.33747 4.98011 6.18667C5.00663 6.39473 5.00663 6.60527 4.98011 6.81333C4.87187 7.66252 4.1689 8.35925 2.76297 9.75269L1 11.5" stroke-linecap="round"/>
                     </svg>
                 </div>

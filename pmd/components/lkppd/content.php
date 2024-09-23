@@ -6,15 +6,33 @@
         <div x-data="{ isOpen : false }" class="space-y-5">
             <div class="flex justify-between items-center">
                 <h1 class="text-base md:text-lg lg:text-xl text-black font-medium">Laporan Akhir Tahun Anggaran</h1>
-                <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-[#615EFC] font-medium">Home</span> / Laporan Akhir Tahun Anggaran</h1>
+                <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-primary font-medium">Home</span> / Laporan Akhir Tahun Anggaran</h1>
+            </div>
+            <div class="w-full md:w-[60%] lg:w-[40%] bg-white py-5 md:py-6 px-5 space-y-2 rounded md:rounded-md shadow-md shadow-black/5">
+                <h1 class="text-xs md:text-sm text-black font-normal">Silahkan Pilih <span class="text-[#EA5858] font-medium">Desa</span></h1>
+                <button @click="isOpen = !isOpen" class="flex items-center gap-1 md:gap-2 bg-primary py-1.5 px-4 rounded">
+                    <h1 class="text-xs md:text-sm text-white font-medium">Pilih Desa</h1>
+                    <svg :class="{ 'rotate-90 ' : isOpen }"  class="w-4 stroke-white stroke-[2]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5L15 12L9 19" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
             <?php include_once("../pmd/components/desa/content.php") ?>
+            <div :class="isOpen ? 'hidden' : 'block'" class="flex justify-center items-center pt-10">
+                <div class="space-y-2">
+                    <img class="w-28 md:w-32 h-28 md:h-32 mx-auto" src="/svgs/search.svg">
+                    <div class="text-center">
+                        <h1 class="text-lg md:text-xl text-black font-medium">Desa Tidak Ditemukan</h1>
+                        <h1 class="text-[10px] md:text-xs text-[#7A7A7A] font-normal">Pilih Desa untuk memunculkan data</h1>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <section class="space-y-3">
             <section class="w-full lg:flex justify-between items-center gap-3 space-y-3 lg:space-y-0">
                 <div class="w-full md:w-[60%] lg:w-[40%] bg-white py-3 md:py-4 px-5 space-y-2 rounded md:rounded-md shadow-md shadow-black/5">
-                    <h1 class="text-xs md:text-sm text-[#5869EA] font-semibold">Laporan Akhir Tahun Anggaran Desa Janji</h1>
+                    <h1 class="text-xs md:text-sm text-primary font-semibold">Laporan Akhir Tahun Anggaran Desa Janji</h1>
                 </div>
                 <div class="md:flex items-center gap-3 space-y-3 md:space-y-0">
                     <div x-data="{ selected : null, isOpen : false }" class="flex items-center gap-2 md:gap-3">
@@ -103,7 +121,7 @@
                                                     <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                                     </button>
-                                                    <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                                    <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Simpan</h1>
                                                     </button>
                                                 </div>
@@ -111,7 +129,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="flex items-center gap-2 w-fit bg-[#5869EA] py-1.5 px-2 rounded-md mx-auto">
+                                <button class="flex items-center gap-2 w-fit bg-primary py-1.5 px-2 rounded-md mx-auto">
                                     <svg class="w-3.5 stroke-white" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.60005 15.2007H3.10004C2.10593 15.2007 1.30004 14.3948 1.30005 13.4007L1.30012 2.60077C1.30012 1.60666 2.10601 0.800781 3.10012 0.800781H11.2003C12.1944 0.800781 13.0003 1.60667 13.0003 2.60078V6.20078M12.55 12.0125V11.9651M4.45033 4.40078H9.85033M4.45033 7.10078H9.85033M4.45033 9.80078H7.15033M15.7 12.0508C15.7 12.0508 14.9529 14.2555 12.55 14.217C10.1472 14.1785 9.40005 12.0508 9.40005 12.0508C9.40005 12.0508 10.1169 9.80752 12.55 9.80752C14.9832 9.80752 15.7 12.0508 15.7 12.0508Z" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -164,7 +182,7 @@
                                                     <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                                     </button>
-                                                    <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                                    <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Simpan</h1>
                                                     </button>
                                                 </div>
@@ -172,7 +190,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="flex items-center gap-2 w-fit bg-[#5869EA] py-1.5 px-2 rounded-md mx-auto">
+                                <button class="flex items-center gap-2 w-fit bg-primary py-1.5 px-2 rounded-md mx-auto">
                                     <svg class="w-3.5 stroke-white" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.60005 15.2007H3.10004C2.10593 15.2007 1.30004 14.3948 1.30005 13.4007L1.30012 2.60077C1.30012 1.60666 2.10601 0.800781 3.10012 0.800781H11.2003C12.1944 0.800781 13.0003 1.60667 13.0003 2.60078V6.20078M12.55 12.0125V11.9651M4.45033 4.40078H9.85033M4.45033 7.10078H9.85033M4.45033 9.80078H7.15033M15.7 12.0508C15.7 12.0508 14.9529 14.2555 12.55 14.217C10.1472 14.1785 9.40005 12.0508 9.40005 12.0508C9.40005 12.0508 10.1169 9.80752 12.55 9.80752C14.9832 9.80752 15.7 12.0508 15.7 12.0508Z" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -225,7 +243,7 @@
                                                     <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                                     </button>
-                                                    <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                                    <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Simpan</h1>
                                                     </button>
                                                 </div>
@@ -233,7 +251,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="flex items-center gap-2 w-fit bg-[#5869EA] py-1.5 px-2 rounded-md mx-auto">
+                                <button class="flex items-center gap-2 w-fit bg-primary py-1.5 px-2 rounded-md mx-auto">
                                     <svg class="w-3.5 stroke-white" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.60005 15.2007H3.10004C2.10593 15.2007 1.30004 14.3948 1.30005 13.4007L1.30012 2.60077C1.30012 1.60666 2.10601 0.800781 3.10012 0.800781H11.2003C12.1944 0.800781 13.0003 1.60667 13.0003 2.60078V6.20078M12.55 12.0125V11.9651M4.45033 4.40078H9.85033M4.45033 7.10078H9.85033M4.45033 9.80078H7.15033M15.7 12.0508C15.7 12.0508 14.9529 14.2555 12.55 14.217C10.1472 14.1785 9.40005 12.0508 9.40005 12.0508C9.40005 12.0508 10.1169 9.80752 12.55 9.80752C14.9832 9.80752 15.7 12.0508 15.7 12.0508Z" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -246,19 +264,19 @@
             </section>
 
             <section class="flex justify-center items-center gap-3">
-                <button class="bg-[#5869EA] py-1.5 px-4 rounded-md md:rounded-lg">
+                <button class="bg-primary py-1.5 px-4 rounded-md md:rounded-lg">
                     <h1 class="text-[10px] md:text-sm text-white font-semibold">Sebelumnya</h1>
                 </button>
-                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-[#615EFC]">
-                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-[#615EFC] font-semibold">1</h1>
+                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-primary">
+                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-primary font-semibold">1</h1>
                 </button>
-                <button class="py-1 px-6 md:px-8 border-b border-[#615EFC]">
-                    <h1 class="text-[10px] md:text-sm text-[#615EFC] font-semibold">2</h1>
+                <button class="py-1 px-6 md:px-8 border-b border-primary">
+                    <h1 class="text-[10px] md:text-sm text-primary font-semibold">2</h1>
                 </button>
-                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-[#615EFC]">
-                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-[#615EFC] font-semibold">3</h1>
+                <button class="hidden sm:block group transition-all py-1 px-3.5 focus:px-6 md:focus:px-8 focus:border-b focus:border-primary">
+                    <h1 class="text-[10px] md:text-sm text-[#9B9B9B] transition-colors group-focus:text-primary font-semibold">3</h1>
                 </button>
-                <button class="bg-[#5869EA] py-1.5 px-4 rounded-md md:rounded-lg">
+                <button class="bg-primary py-1.5 px-4 rounded-md md:rounded-lg">
                     <h1 class="text-[10px] md:text-sm text-white font-semibold">Selanjutnya</h1>
                 </button>
             </section>

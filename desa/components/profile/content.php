@@ -5,7 +5,7 @@
     <main :class="isOpenn ? 'md:ml-60' : 'md:ml-20 ' + 'transition-all duration-500'" class="relative md:ml-60 pt-16 p-5 space-y-5">
         <div class="flex justify-between items-center">
             <h1 class="text-base md:text-lg lg:text-xl text-black font-medium">Edit Profile</h1>
-            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-[#615EFC] font-medium">Home</span> / Edit Profile</h1>
+            <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-primary font-medium">Home</span> / Edit Profile</h1>
         </div>
 
         <div class="space-y-1">
@@ -56,7 +56,7 @@
                     <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                 </button>
                 <div x-data="{ modal: false }">
-                    <button type="button" @click="modal = !modal" :class="{ 'bg-[#615EFC] text-white cursor-pointer' : username && firstName && lastName && phone && position, 'bg-[#979696] text-[#6A6A6A] cursor-not-allowed' : !(username && firstName && lastName && phone && position) }" :disabled="!(username && firstName && lastName && phone && position)" class="py-1.5 md:py-2 px-6 md:px-8 transition-colors duration-500 rounded shadow-md shadow-[#0000004D]">
+                    <button type="button" @click="modal = !modal" :class="{ 'bg-primary text-white cursor-pointer' : username && firstName && lastName && phone && position, 'bg-[#979696] text-[#6A6A6A] cursor-not-allowed' : !(username && firstName && lastName && phone && position) }" :disabled="!(username && firstName && lastName && phone && position)" class="py-1.5 md:py-2 px-6 md:px-8 transition-colors duration-500 rounded shadow-md shadow-[#0000004D]">
                         <h1 class="text-[10px] md:text-xs font-medium uppercase">Simpan</h1>
                     </button>
                     <div x-show="modal" x-transition.duration.300ms.opacity.50 :class="{ 'visible': modal, 'invisible': !modal }" class="invisible fixed inset-0 z-50 bg-[#0000006E] flex items-center justify-center h-screen">
@@ -76,7 +76,7 @@
                                     <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Periksa</h1>
                                     </button>
-                                    <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                    <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Simpan</h1>
                                     </button>
                                 </div>

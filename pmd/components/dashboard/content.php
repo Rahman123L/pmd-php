@@ -21,11 +21,11 @@
                         </defs>
                     </svg> 
                 </div>
-                <div class="relative z-10 flex justify-center items-center gap-2 md:gap-3">
+                <div class="relative z-10 flex justify-start items-center gap-2 md:gap-3 px-3 md:px-5">
                     <div class="bg-[#7673AA] p-2.5 rounded-full">
-                        <img class="w-8 h-8 object-contain" src="/svgs/kecamatan.svg">
+                        <img class="w-5 md:w-8 h-5 md:h-8 object-contain" src="/svgs/kecamatan.svg">
                     </div>
-                    <div class="text-start">
+                    <div class="text-start -space-y-1 md:space-y-0">
                         <h1 class="text-lg md:text-xl lg:text-2xl text-white font-black">9</span>
                         <h1 class="text-[10px] md:text-xs text-white font-medium">Jumlah Kecematan</h1>
                     </div>
@@ -54,11 +54,11 @@
                         </defs>
                     </svg> 
                 </div>
-                <div class="relative z-10 flex justify-center items-center gap-2 md:gap-3">
+                <div class="relative z-10 flex justify-start items-center gap-2 md:gap-3 px-3 md:px-5">
                     <div class="bg-[#E36A6F] p-2.5 rounded-full">
-                        <img class="w-8 h-8 object-contain" src="/svgs/kelurahan.svg">
+                        <img class="w-5 md:w-8 h-5 md:h-8 object-contain" src="/svgs/kelurahan.svg">
                     </div>
-                    <div class="text-start">
+                    <div class="text-start -space-y-1 md:space-y-0">
                         <h1 class="text-lg md:text-xl lg:text-2xl text-white font-black">23</span>
                         <h1 class="text-[10px] md:text-xs text-white font-medium">Jumlah Kelurahan</h1>
                     </div>
@@ -87,11 +87,11 @@
                         </defs>
                     </svg> 
                 </div>
-                <div class="relative z-10 flex justify-center items-center gap-2 md:gap-3">
+                <div class="relative z-10 flex justify-start items-center gap-2 md:gap-3 px-3 md:px-5">
                     <div class="bg-[#4CB180] p-2.5 rounded-full">
-                        <img class="w-8 h-8 object-contain" src="/svgs/desa.svg">
+                        <img class="w-5 md:w-8 h-5 md:h-8 object-contain" src="/svgs/desa.svg">
                     </div>
-                    <div class="text-start">
+                    <div class="text-start -space-y-1 md:space-y-0">
                         <h1 class="text-lg md:text-xl lg:text-2xl text-white font-black">77</span>
                         <h1 class="text-[10px] md:text-xs text-white font-medium">Jumlah Desa</h1>
                     </div>
@@ -120,11 +120,11 @@
                         </defs>
                     </svg> 
                 </div>
-                <div class="relative z-10 flex justify-center items-center gap-2 md:gap-3">
+                <div class="relative z-10 flex justify-start items-center gap-2 md:gap-3 px-3 md:px-5">
                     <div class="bg-[#6AB4D5] p-2.5 rounded-full">
-                        <img class="w-8 h-8 object-contain" src="/svgs/dusun.svg">
+                        <img class="w-5 md:w-8 h-5 md:h-8 object-contain" src="/svgs/dusun.svg">
                     </div>
-                    <div class="text-start">
+                    <div class="text-start -space-y-1 md:space-y-0">
                         <h1 class="text-lg md:text-xl lg:text-2xl text-white font-black">212</span>
                         <h1 class="text-[10px] md:text-xs text-white font-medium">Jumlah Dusun</h1>
                     </div>
@@ -144,24 +144,31 @@
         </section>
 
         <section class="flex items-center gap-2 md:gap-3">
-            <button class="flex justify-center items-center gap-2 md:gap-3 bg-white py-2 px-4 rounded md:rounded-md">
-                <h1 class="text-xs md:text-sm text-black font-normal">Pilih Desa</h1>
-                <svg class="w-2 md:w-3 stroke-black stroke-[1.5]" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 1.53284L9.25269 3.29581C7.85925 4.70174 7.16253 5.40471 6.31333 5.51295C6.10527 5.53947 5.89473 5.53947 5.68667 5.51295C4.83748 5.40471 4.14075 4.70174 2.74731 3.29581L1 1.53284" stroke-linecap="round"/>
-                </svg>
-            </button>
-            <button class="flex justify-center items-center gap-2 md:gap-3 bg-white py-2 px-4 rounded md:rounded-md">
-                <h1 class="text-xs md:text-sm text-black font-normal">Pilih Tahun</h1>
-                <svg class="w-2 md:w-3 stroke-black stroke-[1.5]" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 1.53284L9.25269 3.29581C7.85925 4.70174 7.16253 5.40471 6.31333 5.51295C6.10527 5.53947 5.89473 5.53947 5.68667 5.51295C4.83748 5.40471 4.14075 4.70174 2.74731 3.29581L1 1.53284" stroke-linecap="round"/>
-                </svg>
-            </button>
-            <button class="flex justify-center items-center gap-2 md:gap-3 bg-white py-2 px-4 rounded md:rounded-md">
+            <div x-data="{ isOpen : false }" class="space-y-2">
+                <button @click="isOpen = !isOpen" class="flex justify-center items-center gap-2 md:gap-3 w-fit bg-white py-2 px-4 rounded md:rounded-md">
+                    <h1 class="text-xs md:text-sm text-black font-normal">Pilih Desa</h1>
+                    <svg class="w-2 md:w-3 stroke-black stroke-[1.5]" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 1.53284L9.25269 3.29581C7.85925 4.70174 7.16253 5.40471 6.31333 5.51295C6.10527 5.53947 5.89473 5.53947 5.68667 5.51295C4.83748 5.40471 4.14075 4.70174 2.74731 3.29581L1 1.53284" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div x-show="isOpen" @click.outside="isOpen = false" class="absolute w-[70%]">
+                    <?php include_once("../pmd/components/desa/content.php") ?>
+                </div>
+            </div>
+            <div class="">
+                <div class="flex justify-center items-center gap-2 md:gap-3 w-fit bg-white py-2 px-4 rounded md:rounded-md">
+                    <h1 class="text-xs md:text-sm text-black font-normal">Pilih Tahun</h1>
+                    <svg class="w-2 md:w-3 stroke-black stroke-[1.5]" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 1.53284L9.25269 3.29581C7.85925 4.70174 7.16253 5.40471 6.31333 5.51295C6.10527 5.53947 5.89473 5.53947 5.68667 5.51295C4.83748 5.40471 4.14075 4.70174 2.74731 3.29581L1 1.53284" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="flex justify-center items-center gap-2 md:gap-3 w-fit bg-white py-2 px-4 rounded md:rounded-md">
                 <h1 class="text-xs md:text-sm text-black font-normal">Pilih Bulan</h1>
                 <svg class="w-2 md:w-3 stroke-black stroke-[1.5]" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 1.53284L9.25269 3.29581C7.85925 4.70174 7.16253 5.40471 6.31333 5.51295C6.10527 5.53947 5.89473 5.53947 5.68667 5.51295C4.83748 5.40471 4.14075 4.70174 2.74731 3.29581L1 1.53284" stroke-linecap="round"/>
                 </svg>
-            </button>
+            </div>
         </section>
 
         <section class="grid grid-cols-1 lg:grid-cols-5 gap-4">
@@ -263,7 +270,7 @@
 
         <section class="grid grid-cols-1 lg:grid-cols-5 gap-4">
             <div class="row-span-2 col-span-1 lg:col-span-3 h-fit">
-                <div class="flex justify-between items-center bg-white py-2.5 md:py-3 px-5 md:px-6 rounded md:rounded-md">
+                <div class="flex justify-between items-center bg-white py-2.5 md:py-3 px-5 md:px-6 rounded-t md:rounded-t-md">
                     <h1 class="text-xs md:text-sm text-primary font-normal">Manajemen Surat</h1>
                     <div class="flex justify-center items-center gap-2 md:gap-3">
                         <h1 class="text-xs md:text-sm text-primary font-normal">Lihat Data Lengkap</h1>
@@ -272,7 +279,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="scrollbar-x bg-transparent rounded md:rounded-md">
+                <div class="scrollbar-x bg-transparent rounded-b md:rounded-b-md">
                     <table class="w-max lg:w-full mx-auto bg-white text-center table-auto">
                         <tr class="text-[10px] md:text-xs text-black capitalize">
                             <th class="w-[20%] bg-[#F2F8FF] font-normal p-3 first:pl-4 last:pr-4 last:pl-4 last:sticky last:right-0">Kode Desa</th>

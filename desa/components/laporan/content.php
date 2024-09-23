@@ -2,13 +2,13 @@
     <div class="space-y-1">
         <h1 class="text-sm md:text-base text-black font-normal">Evaluasi Rencana Kerja Pemerintah Desa</h1>
         <div class="flex items-center gap-2 md:gap-3">
-            <button class="flex items-center gap-2 bg-[#5869EA] py-1.5 px-2 rounded-md">
+            <button class="flex items-center gap-2 bg-primary py-1.5 px-2 rounded-md">
                 <svg class="w-3.5 stroke-white" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.60005 15.2007H3.10004C2.10593 15.2007 1.30004 14.3948 1.30005 13.4007L1.30012 2.60077C1.30012 1.60666 2.10601 0.800781 3.10012 0.800781H11.2003C12.1944 0.800781 13.0003 1.60667 13.0003 2.60078V6.20078M12.55 12.0125V11.9651M4.45033 4.40078H9.85033M4.45033 7.10078H9.85033M4.45033 9.80078H7.15033M15.7 12.0508C15.7 12.0508 14.9529 14.2555 12.55 14.217C10.1472 14.1785 9.40005 12.0508 9.40005 12.0508C9.40005 12.0508 10.1169 9.80752 12.55 9.80752C14.9832 9.80752 15.7 12.0508 15.7 12.0508Z" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <h1 class="text-xs md:text-sm text-[#E8EDF2] font-normal">LihatPDF</h1>
             </button>
-            <button class="flex items-center gap-2 bg-[#F9CA04] py-1.5 px-2 rounded-md">
+            <button class="flex items-center gap-2 bg-secondary py-1.5 px-2 rounded-md">
                 <h1 class="text-xs md:text-sm text-[#E8EDF2] font-normal">Upload Revisi Laporan</h1>
                 <svg class="w-3 md:w-4" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 10.5999L8 8.05429M8 8.05429L8 5.50871M8 8.05429L5.45441 8.05429M8 8.05429L10.5456 8.05429M0.800702 11.1556L0.80077 4.31237C0.800774 3.62693 0.800519 2.65063 0.800301 1.94371C0.800147 1.44653 1.20315 1.04395 1.70034 1.04395H5.989L8.06277 3.25917H14.3C14.797 3.25917 15.2 3.66213 15.2 4.1592L15.1998 11.1557C15.1997 12.1498 14.3938 12.9556 13.3998 12.9556L2.6007 12.9556C1.60658 12.9556 0.800692 12.1497 0.800702 11.1556Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -18,7 +18,7 @@
     </div>
     <label class="w-fit flex items-center gap-2 md:gap-3">
         <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Tanggal</h1>
-        <input type="text" value="04-September-2024" required autocomplete="off" class="w-full text-[10px] md:text-xs text-black focus:text-black font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
+        <input type="text" value="04-September-2024" disabled required autocomplete="off" class="w-full text-[10px] md:text-xs text-black focus:text-black font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
         <svg class="w-6 md:w-7 cursor-pointer" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4.8308 6.67697H14.9496M4.37467 1.0626V2.8942M4.37467 2.8942L14.9994 2.894M4.37467 2.8942C2.61425 2.8942 1.18732 4.34583 1.18741 6.13669L1.1879 16.9451C1.18798 18.7359 2.61501 20.1875 4.37531 20.1875H15C16.7604 20.1875 18.1875 18.7357 18.1874 16.9448L18.1869 6.13639C18.1868 4.34564 16.7597 2.894 14.9994 2.894M14.9994 1.0625V2.894M7.56286 16.4045V9.91944L5.43792 11.5407M13.4064 16.4045V9.91944L11.2815 11.5407" stroke="#778294" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -27,19 +27,19 @@
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
     <label class="grid gap-1">
         <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Desa</h1>
-        <input type="text" value="Janji" required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
+        <input type="text" value="Janji" disabled required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
     </label>
     <label class="grid gap-1">
         <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Provinsi</h1>
-        <input type="text" value="Sumatera Utara" required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
+        <input type="text" value="Sumatera Utara" disabled required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
     </label>
     <label class="grid gap-1">
         <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Kecamatan</h1>
-        <input type="text" value="Bilah Barat" required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
+        <input type="text" value="Bilah Barat" disabled required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
     </label>
     <label class="grid gap-1">
         <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Kabupaten / Kota</h1>
-        <input type="text" value="Labuhanbatu" required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
+        <input type="text" value="Labuhanbatu" disabled required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
     </label>
 </div>
 <div class="w-full bg-white p-3 md:p-4 rounded-md md:rounded-lg">
@@ -58,12 +58,12 @@
                     <div x-data="{ selected: null }" class="space-y-3">
                         <h1 class="text-[10px] md:text-xs text-black font-medium">Rumusan Prioritas Program Pembangunan</h1>
                         <label class="flex justify-normal items-center gap-2">
-                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Dilaksanakan (ada dokumen)</h1>
+                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
                         </label>
                         <label class="flex justify-normal items-center gap-2">
-                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                         </label>
                         <div class="md:flex items-start gap-2">
                             <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
@@ -86,12 +86,12 @@
                         
                         <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
                             <label class="flex justify-normal items-center gap-2">
-                                <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Dilaksanakan (ada dokumen)</h1>
+                                <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
                             </label>
                             <label class="flex justify-normal items-center gap-2">
-                                <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                             </label>
                             <div class="md:flex items-start gap-2">
                                 <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
@@ -112,12 +112,12 @@
                                     </div>
                                     <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
                                         <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Dilaksanakan (ada dokumen)</h1>
+                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
                                         </label>
                                         <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                                         </label>
                                         <div class="md:flex items-start gap-2">
                                             <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
@@ -140,12 +140,12 @@
                                     </div>
                                     <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
                                         <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Dilaksanakan (ada dokumen)</h1>
+                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
                                         </label>
                                         <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                                         </label>
                                         <div class="md:flex items-start gap-2">
                                             <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
@@ -164,12 +164,12 @@
                     <div x-data="{ selected: null }" class="space-y-3">
                         <h1 class="text-[10px] md:text-xs text-black font-medium">Rumusan Prioritas Program Pembangunan</h1>
                         <label class="flex justify-normal items-center gap-2">
-                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Dilaksanakan (ada dokumen)</h1>
+                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
                         </label>
                         <label class="flex justify-normal items-center gap-2">
-                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                         </label>
                         <div class="md:flex items-start gap-2">
                             <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
@@ -192,12 +192,12 @@
                         
                         <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
                             <label class="flex justify-normal items-center gap-2">
-                                <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Dilaksanakan (ada dokumen)</h1>
+                                <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
                             </label>
                             <label class="flex justify-normal items-center gap-2">
-                                <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                             </label>
                             <div class="md:flex items-start gap-2">
                                 <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
@@ -218,12 +218,12 @@
                                     </div>
                                     <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
                                         <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Dilaksanakan (ada dokumen)</h1>
+                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
                                         </label>
                                         <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                                         </label>
                                         <div class="md:flex items-start gap-2">
                                             <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
@@ -246,12 +246,12 @@
                                     </div>
                                     <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
                                         <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Dilaksanakan (ada dokumen)</h1>
+                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
                                         </label>
                                         <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-[#615EFC] rounded-md bg-transparent border-gray-500 checked:border-[#615EFC] ring-[#615EFC] checked:ring-[#615EFC]">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-[#615EFC] font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                                         </label>
                                         <div class="md:flex items-start gap-2">
                                             <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
@@ -353,7 +353,7 @@
                                                     <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                                     </button>
-                                                    <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                                    <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Simpan</h1>
                                                     </button>
                                                 </div>
@@ -391,7 +391,7 @@
                                                 <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-1.5 px-4 md:px-5 rounded">
                                                     <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                                 </button>
-                                                <button class="bg-[#615EFC] py-1.5 px-4 md:px-5 rounded">
+                                                <button class="bg-primary py-1.5 px-4 md:px-5 rounded">
                                                     <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Konfirmasi</h1>
                                                 </button>
                                             </div>
@@ -453,7 +453,7 @@
                                     <button type="button" @click="modal = false" class="bg-[#FF4E4E] py-2 px-4 md:px-5 rounded">
                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Batal</h1>
                                     </button>
-                                    <button class="bg-[#615EFC] py-2 px-4 md:px-5 rounded">
+                                    <button class="bg-primary py-2 px-4 md:px-5 rounded">
                                         <h1 class="text-[10px] md:text-xs text-white font-medium uppercase">Simpan</h1>
                                     </button>
                                 </div>

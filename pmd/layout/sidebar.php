@@ -6,26 +6,22 @@
     x-transition:leave="transform transition-transform duration-300"
     x-transition:leave-start="translate-x-0" 
     x-transition:leave-end="-translate-x-full"
-    class="hidden fixed top-0 left-0 z-50 w-60 bg-primary shadow-xl h-screen scrollbar-y"
+    class="hidden fixed top-0 left-0 z-50 w-60 bg-primary h-screen scrollbar-y"
     :class="{ 'block': isOpen, 'hidden': !isOpen, 'w-60': isOpenn, 'w-20 transition-all duration-500': !isOpenn,}"
     >
-    <div :class="isOpenn ? 'justify-between' : 'justify-evenly my-2'" class="flex justify-between items-center px-4 py-3 md:py-2.5 lg:py-3">
+    <div :class="isOpenn ? 'justify-between' : 'justify-evenly'" class="flex justify-between items-center bg-[#ECE5DD] px-4 py-3 md:py-2.5 lg:py-3">
         <div :class="isOpenn ? 'block' : 'hidden'" class="flex items-center gap-2 md:gap-3">
-            <img class="w-9 md:w-10 h-9 md:h-10" src="/svgs/logo.svg">
-            <div class="flex md:grid items-center gap-1 md:gap-0">
-                <h1 class="text-xs md:text-sm text-white font-semibold uppercase">Smart Desa</h1>
-                <h1 class="text-xs md:text-sm text-white font-semibold uppercase">PMD</h1>
-            </div>
+            <img class="w-28 md:w-32 object-contain" src="/images/sipdesa.png">
         </div>
         <button @click="isOpenn = !isOpenn" class="hidden md:block">
-            <svg class="w-[22px] md:w-6 fill-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-[22px] md:w-6 fill-black" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M20.75 7C20.75 7.41421 20.4142 7.75 20 7.75L4 7.75C3.58579 7.75 3.25 7.41421 3.25 7C3.25 6.58579 3.58579 6.25 4 6.25L20 6.25C20.4142 6.25 20.75 6.58579 20.75 7Z"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M20.75 12C20.75 12.4142 20.4142 12.75 20 12.75L4 12.75C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25L20 11.25C20.4142 11.25 20.75 11.5858 20.75 12Z"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M20.75 17C20.75 17.4142 20.4142 17.75 20 17.75L4 17.75C3.58579 17.75 3.25 17.4142 3.25 17C3.25 16.5858 3.58579 16.25 4 16.25L20 16.25C20.4142 16.25 20.75 16.5858 20.75 17Z"/>
             </svg>
         </button>
     </div>
-    <div class="grid gap-3 mt-5">
+    <div class="grid gap-3 mt-3">
         <a href="dashboard.php">
             <button class="w-full relative group flex items-center gap-2 md:gap-3 pr-5">
                 <div class="invisible transition-all group-hover:visible group-focus:visible bg-white py-3.5 md:py-4 px-1 rounded-r-md"></div>
@@ -253,7 +249,7 @@
                 </div>
             </button>
         </a>
-        <a href="/auth/login.php" class="md:absolute md:bottom-4 w-full">
+        <a href="/index.php" class="md:absolute md:bottom-4 w-full">
             <div :class="isOpenn ? 'bg-white py-2 px-6 rounded md:rounded-md shadow-lg shadow-black/20' : 'bg-transparent py-2 px-3 hover:bg-white rounded md:rounded-md hover:shadow-lg hover:shadow-black/20'" class="flex justify-center items-center gap-2 md:gap-3 ml-4 mr-5 md:mx-5">
                 <svg class="w-[14px]" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 8.25C4.08579 8.25 3.75 8.58578 3.75 9C3.75 9.41421 4.08579 9.75 4.5 9.75L12.5 9.75L12.5 12C12.5 12.929 12.5 13.3935 12.4384 13.7822C12.0996 15.9216 10.4216 17.5996 8.28217 17.9384C7.89351 18 7.429 18 6.5 18C5.57099 18 5.10649 18 4.71783 17.9384C2.57836 17.5996 0.900415 15.9216 0.561557 13.7822C0.499999 13.3935 0.499999 12.929 0.499999 12L0.5 6C0.5 5.07099 0.5 4.60649 0.561558 4.21783C0.900415 2.07836 2.57837 0.400415 4.71783 0.0615577C5.10649 -6.18232e-07 5.57099 -5.97928e-07 6.5 -5.5732e-07C7.42901 -5.16712e-07 7.89351 -4.96408e-07 8.28217 0.0615578C10.4216 0.400416 12.0996 2.07836 12.4384 4.21783C12.5 4.60649 12.5 5.07099 12.5 6L12.5 8.25L4.5 8.25ZM12.5 8.25L17.3105 8.25C16.983 7.92734 16.501 7.54375 15.797 6.98553L14.034 5.58768C13.7095 5.33034 13.655 4.8586 13.9123 4.53403C14.1697 4.20946 14.6414 4.15497 14.966 4.41232L16.7648 5.83857C17.4372 6.37175 17.9922 6.81172 18.3875 7.20551C18.7932 7.60962 19.1294 8.05816 19.2208 8.63133C19.2402 8.75344 19.25 8.87661 19.25 9C19.25 9.12339 19.2402 9.24656 19.2208 9.36867C19.1294 9.94184 18.7932 10.3904 18.3875 10.7945C17.9922 11.1883 17.4373 11.6282 16.7648 12.1614L14.966 13.5877C14.6414 13.845 14.1697 13.7905 13.9123 13.466C13.655 13.1414 13.7095 12.6697 14.034 12.4123L15.797 11.0145C16.501 10.4563 16.983 10.0727 17.3105 9.75L12.5 9.75L12.5 8.25Z" fill="#FF4E4E"/>
