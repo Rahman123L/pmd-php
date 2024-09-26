@@ -8,11 +8,11 @@
             <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-primary font-medium">Home</span> / Inbox</h1>
         </div>
 
-        <div class="grid w-full divide-y-[1.5px] bg-white rounded md:rounded-md shadow-md shadow-black/20">
+        <div x-data="checkbox()" class="grid w-full divide-y-[1.5px] bg-white rounded md:rounded-md shadow-md shadow-black/20">
             <div class="w-full flex justify-between items-center gap-2 md:gap-3 py-2.5 px-6">
                 <div class="flex items-center sm:gap-1 md:gap-4">
                     <div class="flex items-center gap-1 md:gap-2">
-                        <input type="checkbox" name="" id="" class="appearance-none checked:bg-gray-500 rounded bg-transparent border-gray-500 checked:border-gray-500 ring-gray-500 checked:ring-gray-500">
+                        <input type="checkbox" name="" id="" disabled x-model="selectAll" class="appearance-none checked:bg-gray-500 rounded bg-transparent border-gray-500 checked:border-gray-500 ring-gray-500 checked:ring-gray-500">
                         <div x-data="{ fitur : false }" class="group relative">
                             <button @click="fitur = !fitur" :class="fitur ? 'bg-[#E9E9E9] p-1.5 rounded-full cursor-pointer' : ''" class="relative hover:bg-[#E9E9E9] p-1.5 rounded-full cursor-pointer">
                                 <svg class="w-2" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,13 +23,13 @@
                                 <h1 class="text-[10px] md:text-xs text-white font-normal">Pilih</h1>
                             </div>
                             <div x-show="fitur" @click.outside="fitur = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': fitur, 'hidden': !fitur }" class="hidden absolute w-max md:w-36 bg-white rounded shadow-md shadow-black/20">
-                                <div class="bg-transparent py-2 px-4 hover:bg-[#EAEAEA] cursor-pointer">
+                                <div @click="toggleAllCheckboxes" class="bg-transparent py-2 px-4 hover:bg-[#EAEAEA] cursor-pointer">
                                     <h1 class="text-[10px] md:text-xs text-[#778294] font-normal">Semua</h1>
                                 </div>
-                                <div class="bg-transparent py-2 px-4 hover:bg-[#EAEAEA] cursor-pointer">
+                                <div @click="toggleCheckbox(0)" class="bg-transparent py-2 px-4 hover:bg-[#EAEAEA] cursor-pointer">
                                     <h1 class="text-[10px] md:text-xs text-[#778294] font-normal">Sudah dibaca</h1>
                                 </div>
-                                <div class="bg-transparent py-2 px-4 hover:bg-[#EAEAEA] cursor-pointer">
+                                <div @click="toggleCheckbox(1)" class="bg-transparent py-2 px-4 hover:bg-[#EAEAEA] cursor-pointer">
                                     <h1 class="text-[10px] md:text-xs text-[#778294] font-normal">Belum dibaca</h1>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@
             </div>
             <a href="" class="grid grid-cols-1 lg:grid-cols-6 gap-1.5 place-items-start bg-[#F4F3FF] py-4 px-6 hover:border-[1px] hover:border-[#0000006E] hover:shadow-md hover:shadow-black/20">
                 <div class="col-span-1 lg:col-span-2 flex items-center gap-2 md:gap-3">
-                    <input type="checkbox" name="" id="" class="appearance-none checked:bg-gray-500 rounded bg-transparent border-gray-500 checked:border-gray-500 ring-gray-500 checked:ring-gray-500">
+                    <input type="checkbox" name="" id="" x-model="checkboxes[0]" class="appearance-none checked:bg-gray-500 rounded bg-transparent border-gray-500 checked:border-gray-500 ring-gray-500 checked:ring-gray-500">
                     <img class="w-7 lg:w-8 h-7 lg:h-8 bg-transparent object-cover rounded-full" src="/images/avatar.jpg">
                     <h1 class="text-xs md:text-sm text-black font-medium">Rizky Rahman Rambe</h1>
                 </div>
@@ -144,7 +144,7 @@
             </a>
             <a href="" class="grid grid-cols-1 lg:grid-cols-6 gap-1.5 place-items-start bg-[#F4F3FF] py-4 px-6 hover:border-[1px] hover:border-[#0000006E] hover:shadow-md hover:shadow-black/20">
                 <div class="col-span-1 lg:col-span-2 flex items-center gap-2 md:gap-3">
-                    <input type="checkbox" name="" id="" class="appearance-none checked:bg-gray-500 rounded bg-transparent border-gray-500 checked:border-gray-500 ring-gray-500 checked:ring-gray-500">
+                    <input type="checkbox" name="" id="" x-model="checkboxes[0]" class="appearance-none checked:bg-gray-500 rounded bg-transparent border-gray-500 checked:border-gray-500 ring-gray-500 checked:ring-gray-500">
                     <img class="w-7 lg:w-8 h-7 lg:h-8 bg-transparent object-cover rounded-full" src="/images/avatar.jpg">
                     <h1 class="text-xs md:text-sm text-black font-medium">Rizky Rahman Rambe</h1>
                 </div>
@@ -158,7 +158,7 @@
             </a>
             <a href="" class="grid grid-cols-1 lg:grid-cols-6 gap-1.5 place-items-start bg-transparent py-4 px-6 hover:border-[1px] hover:border-[#0000006E] hover:shadow-md hover:shadow-black/20">
                 <div class="col-span-1 lg:col-span-2 flex items-center gap-2 md:gap-3">
-                    <input type="checkbox" name="" id="" class="appearance-none checked:bg-gray-500 rounded bg-transparent border-gray-500 checked:border-gray-500 ring-gray-500 checked:ring-gray-500">
+                    <input type="checkbox" name="" id="" x-model="checkboxes[1]" class="appearance-none checked:bg-gray-500 rounded bg-transparent border-gray-500 checked:border-gray-500 ring-gray-500 checked:ring-gray-500">
                     <img class="w-7 lg:w-8 h-7 lg:h-8 bg-transparent object-cover rounded-full" src="/images/avatar.jpg">
                     <h1 class="text-xs md:text-sm text-black font-medium">Rizky Rahman Rambe</h1>
                 </div>

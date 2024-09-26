@@ -17,9 +17,12 @@ function app() {
             };
             parentMenu.submenus.push(newSubmenu);
         },
-        hapus(index) {
-            this.menus.splice(index, 1);
+        hapus(menuIndex) {
+            this.menus.splice(menuIndex, 1);
             this.updateButtonStates();
+        },
+        hapusSubmenu(parentMenu, submenuIndex) {
+            parentMenu.submenus.splice(submenuIndex, 1);
         },
         hapusAll() {
             this.menus = [];
