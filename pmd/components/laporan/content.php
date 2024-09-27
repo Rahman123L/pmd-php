@@ -35,7 +35,7 @@
     </label>
 </div>
 <div class="w-full bg-white p-3 md:p-4 rounded-md md:rounded-lg">
-    <div x-data="{ accordion : false }" class="space-y-3">
+    <div x-data="{ accordion : true }" class="space-y-3">
         <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
             <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
@@ -58,8 +58,11 @@
                             <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                         </label>
                         <div class="md:flex items-start gap-2">
-                            <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
-                            <h1 class="w-full md:w-[80%] text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                            <div class="">
+                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                            </div>
                         </div>
                         <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar No Rancangan Perdes RKP Desa</h1>
                     </div>
@@ -86,8 +89,11 @@
                                 <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                             </label>
                             <div class="md:flex items-start gap-2">
-                                <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
-                                <h1 class="w-full md:w-[80%] text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                <div class="">
+                                    <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                    <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                </div>
                             </div>
                             <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar Prioritas Program dan Kegiatan Desa berdasarkan kewenangan Pusat</h1>
 
@@ -112,8 +118,11 @@
                                             <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                                         </label>
                                         <div class="md:flex items-start gap-2">
-                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
-                                            <h1 class="w-full md:w-[80%] text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                            <div class="">
+                                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -140,8 +149,11 @@
                                             <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                                         </label>
                                         <div class="md:flex items-start gap-2">
-                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
-                                            <h1 class="w-full md:w-[80%] text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                            <div class="">
+                                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -164,8 +176,11 @@
                             <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                         </label>
                         <div class="md:flex items-start gap-2">
-                            <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
-                            <h1 class="w-full md:w-[80%] text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                            <div class="">
+                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                            </div>
                         </div>
                         <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar No Rancangan Perdes RKP Desa</h1>
                     </div>
@@ -192,8 +207,11 @@
                                 <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                             </label>
                             <div class="md:flex items-start gap-2">
-                                <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
-                                <h1 class="w-full md:w-[80%] text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                <div class="">
+                                    <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                    <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                </div>
                             </div>
                             <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar Prioritas Program dan Kegiatan Desa berdasarkan kewenangan Pusat</h1>
 
@@ -218,8 +236,11 @@
                                             <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                                         </label>
                                         <div class="md:flex items-start gap-2">
-                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
-                                            <h1 class="w-full md:w-[80%] text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                            <div class="">
+                                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -246,8 +267,11 @@
                                             <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
                                         </label>
                                         <div class="md:flex items-start gap-2">
-                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan :</span>
-                                            <h1 class="w-full md:w-[80%] text-[10px] md:text-xs text-gray-500 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                            <div class="">
+                                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
