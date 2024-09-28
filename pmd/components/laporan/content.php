@@ -1,203 +1,105 @@
-<div class="md:flex md:justify-between items-center space-y-3 md:space-y-0">
-    <div class="flex items-center gap-3">
+<div x-data="{ isOpen : false }" class="space-y-3">
+    <div class="md:flex items-center gap-3 space-y-1 md:space-y-0">
         <h1 class="text-sm md:text-base text-black font-normal">Evaluasi Rencana Kerja Pemerintah Desa</h1>
-        <button class="flex items-center gap-2 bg-primary py-1.5 px-2 rounded-md">
+        <button @click="isOpen = !isOpen" class="flex items-center gap-2 bg-primary py-1.5 px-2 rounded-md">
             <svg class="w-3.5 stroke-white" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.60005 15.2007H3.10004C2.10593 15.2007 1.30004 14.3948 1.30005 13.4007L1.30012 2.60077C1.30012 1.60666 2.10601 0.800781 3.10012 0.800781H11.2003C12.1944 0.800781 13.0003 1.60667 13.0003 2.60078V6.20078M12.55 12.0125V11.9651M4.45033 4.40078H9.85033M4.45033 7.10078H9.85033M4.45033 9.80078H7.15033M15.7 12.0508C15.7 12.0508 14.9529 14.2555 12.55 14.217C10.1472 14.1785 9.40005 12.0508 9.40005 12.0508C9.40005 12.0508 10.1169 9.80752 12.55 9.80752C14.9832 9.80752 15.7 12.0508 15.7 12.0508Z" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <h1 class="text-xs md:text-sm text-[#E8EDF2] font-normal">LihatPDF</h1>
+            <svg class="w-[6px]" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.99999 4L0 0H6L2.99999 4Z" fill="white"/>
+            </svg>
         </button>
     </div>
-    <label class="w-fit flex items-center gap-2 md:gap-3">
-        <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Tanggal</h1>
-        <input type="text" value="04-September-2024" disabled required autocomplete="off" class="w-full text-[10px] md:text-xs text-black focus:text-black font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
-        <svg class="w-6 md:w-7 cursor-pointer" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4.8308 6.67697H14.9496M4.37467 1.0626V2.8942M4.37467 2.8942L14.9994 2.894M4.37467 2.8942C2.61425 2.8942 1.18732 4.34583 1.18741 6.13669L1.1879 16.9451C1.18798 18.7359 2.61501 20.1875 4.37531 20.1875H15C16.7604 20.1875 18.1875 18.7357 18.1874 16.9448L18.1869 6.13639C18.1868 4.34564 16.7597 2.894 14.9994 2.894M14.9994 1.0625V2.894M7.56286 16.4045V9.91944L5.43792 11.5407M13.4064 16.4045V9.91944L11.2815 11.5407" stroke="#778294" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </label>
+    <div x-show="isOpen" @click.outside="isOpen = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': isOpen, 'hidden': !isOpen }" class="hidden">
+        <section class="scrollbar-x bg-transparent rounded md:rounded-md">
+            <table class="w-full sm:w-[70%] bg-white text-center table-auto">
+                <tr class="text-[10px] md:text-xs text-black capitalize">
+                    <th class="w-[5%] bg-white font-normal py-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">No</th>
+                    <th class="w-[30%] bg-white font-normal p-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">Nama file</th>
+                    <th class="w-[15%] bg-white font-normal p-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">Tindakan</th>
+                </tr>
+                <tr class="odd:bg-white even:bg-[#F5F5F5] text-xs text-black/70 capitalize overflow-visible">
+                    <td class="font-normal my-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">1</td>
+                    <td class="py-3.5 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
+                        <h1 class="line-clamp-1 font-normal">laporan berkas</h1>
+                    </td>
+                    <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
+                        <div class="flex justify-center items-center gap-1.5 md:gap-2">
+                            <button class="flex items-center gap-2 w-fit bg-secondary py-1.5 px-2 rounded-md">
+                                <svg class="w-4 fill-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.25C9.92893 8.25 8.25 9.92893 8.25 12C8.25 14.0711 9.92893 15.75 12 15.75C14.0711 15.75 15.75 14.0711 15.75 12C15.75 9.92893 14.0711 8.25 12 8.25ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.25C7.48587 3.25 4.44529 5.9542 2.68057 8.24686L2.64874 8.2882C2.24964 8.80653 1.88206 9.28392 1.63269 9.8484C1.36564 10.4529 1.25 11.1117 1.25 12C1.25 12.8883 1.36564 13.5471 1.63269 14.1516C1.88206 14.7161 2.24964 15.1935 2.64875 15.7118L2.68057 15.7531C4.44529 18.0458 7.48587 20.75 12 20.75C16.5141 20.75 19.5547 18.0458 21.3194 15.7531L21.3512 15.7118C21.7504 15.1935 22.1179 14.7161 22.3673 14.1516C22.6344 13.5471 22.75 12.8883 22.75 12C22.75 11.1117 22.6344 10.4529 22.3673 9.8484C22.1179 9.28391 21.7504 8.80652 21.3512 8.28818L21.3194 8.24686C19.5547 5.9542 16.5141 3.25 12 3.25ZM3.86922 9.1618C5.49864 7.04492 8.15036 4.75 12 4.75C15.8496 4.75 18.5014 7.04492 20.1308 9.1618C20.5694 9.73159 20.8263 10.0721 20.9952 10.4545C21.1532 10.812 21.25 11.2489 21.25 12C21.25 12.7511 21.1532 13.188 20.9952 13.5455C20.8263 13.9279 20.5694 14.2684 20.1308 14.8382C18.5014 16.9551 15.8496 19.25 12 19.25C8.15036 19.25 5.49864 16.9551 3.86922 14.8382C3.43064 14.2684 3.17374 13.9279 3.00476 13.5455C2.84684 13.188 2.75 12.7511 2.75 12C2.75 11.2489 2.84684 10.812 3.00476 10.4545C3.17374 10.0721 3.43063 9.73159 3.86922 9.1618Z"/>
+                                </svg>
+                                <h1 class="text-white font-normal">Lihat</h1>
+                            </button>
+                            <button class="flex items-center gap-2 w-fit bg-primary py-1.5 px-2 rounded-md">
+                                <svg class="w-3" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.96875 0.708496C6.96875 0.449613 6.75888 0.239746 6.5 0.239746C6.24112 0.239746 6.03125 0.449613 6.03125 0.708496V4.4585H4.625C4.04437 4.4585 3.75406 4.4585 3.51114 4.49697C2.17398 4.70876 1.12526 5.75747 0.913474 7.09464C0.875 7.33755 0.875 7.62787 0.875 8.2085C0.875 8.78912 0.875 9.07944 0.913474 9.32235C1.12526 10.6595 2.17398 11.7082 3.51114 11.92C3.75406 11.9585 4.04437 11.9585 4.625 11.9585H8.375C8.95563 11.9585 9.24594 11.9585 9.48886 11.92C10.826 11.7082 11.8747 10.6595 12.0865 9.32235C12.125 9.07944 12.125 8.78912 12.125 8.2085C12.125 7.62787 12.125 7.33755 12.0865 7.09464C11.8747 5.75747 10.826 4.70876 9.48886 4.49697C9.24594 4.4585 8.95563 4.4585 8.375 4.4585H6.96875V0.708496ZM6.96875 4.4585H6.03125V8.71505C5.82959 8.51039 5.58984 8.20914 5.24096 7.76912L4.3673 6.66726C4.20646 6.46441 3.91162 6.43035 3.70877 6.59119C3.50591 6.75204 3.47186 7.04687 3.6327 7.24973L4.52411 8.37398C4.85735 8.79428 5.13232 9.1411 5.37845 9.38817C5.63102 9.64172 5.91135 9.8519 6.26958 9.90898C6.3459 9.92113 6.42288 9.92725 6.5 9.92725C6.57712 9.92725 6.6541 9.92114 6.73042 9.90898C7.08865 9.8519 7.36899 9.64172 7.62155 9.38817C7.86768 9.1411 8.14266 8.79428 8.4759 8.37397L9.3673 7.24973C9.52814 7.04687 9.49409 6.75204 9.29123 6.59119C9.08838 6.43035 8.79354 6.46441 8.6327 6.66726L7.75904 7.76912C7.41016 8.20914 7.17041 8.51039 6.96875 8.71505V4.4585Z" fill="white"/>
+                                </svg>
+                                <h1 class="text-white font-normal">Download</h1>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-    <label class="grid gap-1">
-        <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Desa</h1>
-        <input type="text" value="Janji" disabled required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
-    </label>
-    <label class="grid gap-1">
-        <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Provinsi</h1>
-        <input type="text" value="Sumatera Utara" disabled required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
-    </label>
-    <label class="grid gap-1">
-        <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Kecamatan</h1>
-        <input type="text" value="Bilah Barat" disabled required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
-    </label>
-    <label class="grid gap-1">
-        <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Kabupaten / Kota</h1>
-        <input type="text" value="Labuhanbatu" disabled required autocomplete="off" class="w-full text-[10px] md:text-xs text-[#778294] focus:text-[#778294] font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-[#778294] placeholder:font-normal bg-white px-5 py-1.5 md:py-2 border-none rounded-md focus:outline-none focus:ring-0 shadow-md shadow-[#00000014]"/>
-    </label>
-</div>
-<div class="w-full bg-white p-3 md:p-4 rounded-md md:rounded-lg">
-    <div x-data="{ accordion : true }" class="space-y-3">
-        <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
-            <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
-            </svg>
-            <h1 class="text-xs md:text-sm text-black font-semibold">A. RANCANGAN PERATURAN DESA</h1>
+
+<div x-data="{ tab : 1 }">
+    <div class="hidden md:block">
+        <div class="flex gap-1 mx-3">
+            <button @click="tab = 0" :class="tab == 0 ? 'bg-white' : 'bg-[#EBEBEB]'" class="py-2 px-3 rounded-t-md transition-colors">
+                <h1 class="text-[10px] md:text-xs text-black font-normal">Semua</h1>
+            </button>
+            <button @click="tab = 1" :class="tab == 1 ? 'bg-white' : 'bg-[#EBEBEB]'" class="w-14 py-2 px-3 rounded-t-md transition-colors">
+                <h1 class="text-[10px] md:text-xs text-black font-normal">A</h1>
+            </button>
+            <button @click="tab = 2" :class="tab == 2 ? 'bg-white' : 'bg-[#EBEBEB]'" class="w-14 py-2 px-3 rounded-t-md transition-colors">
+                <h1 class="text-[10px] md:text-xs text-black font-normal">B</h1>
+            </button>
+            <button @click="tab = 3" :class="tab == 3 ? 'bg-white' : 'bg-[#EBEBEB]'" class="w-14 py-2 px-3 rounded-t-md transition-colors">
+                <svg class="w-1 mx-auto" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.14098 0.27276C0.969369 0.102669 0.692362 0.103905 0.522271 0.27552C0.352181 0.447135 0.353417 0.724142 0.525032 0.894233L1.55343 1.9135C1.9708 2.32716 2.2571 2.61185 2.45083 2.85307C2.63901 3.0874 2.70357 3.23791 2.72075 3.3727C2.73154 3.45734 2.73154 3.54298 2.72075 3.62762C2.70357 3.76242 2.63901 3.91293 2.45083 4.14725C2.2571 4.38848 1.9708 4.67317 1.55343 5.08683L0.525032 6.10609C0.353417 6.27618 0.352181 6.55319 0.522271 6.72481C0.692362 6.89642 0.969369 6.89766 1.14098 6.72757L2.18791 5.68994C2.58223 5.29914 2.90451 4.97974 3.13306 4.69515C3.37072 4.39921 3.54277 4.09882 3.58873 3.73826C3.60888 3.58016 3.60888 3.42017 3.58873 3.26207C3.54277 2.9015 3.37072 2.60112 3.13306 2.30518C2.9045 2.02059 2.58223 1.70119 2.18791 1.31038L1.14098 0.27276Z" fill="black"/>
+                </svg>
+            </button>
         </div>
-
-        <div x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden space-y-3">
-            <div class="border border-[#E9E9E9] p-3 rounded-md md:rounded-lg space-y-3">
-                <div class="flex items-start gap-2 md:gap-3">
-                    <span class="text-[10px] md:text-xs text-black font-medium">1.</span>
-                    <div x-data="{ selected: null }" class="space-y-3">
-                        <h1 class="text-[10px] md:text-xs text-black font-medium">Rumusan Prioritas Program Pembangunan</h1>
-                        <label class="flex justify-normal items-center gap-2">
-                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
-                        </label>
-                        <label class="flex justify-normal items-center gap-2">
-                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
-                        </label>
-                        <div class="md:flex items-start gap-2">
-                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
-                            <div class="">
-                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
-                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
-                            </div>
-                        </div>
-                        <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar No Rancangan Perdes RKP Desa</h1>
-                    </div>
-                </div>
-                <div x-data="{ accordion : false }" class="border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
-                    <div class="space-y-3">
-                        <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
-                            <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
-                            </svg>
-                            <div class="flex items-start gap-1.5">
-                                <span class="text-[10px] md:text-xs text-black font-medium">•</span>
-                                <h1 class="text-[10px] md:text-xs text-black font-medium">Prioritas Program dan Kegiatan Desa berdasarkan kewenangan Pusat</h1>
-                            </div>
-                        </div>
-                        
-                        <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
-                            <label class="flex justify-normal items-center gap-2">
-                                <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
-                            </label>
-                            <label class="flex justify-normal items-center gap-2">
-                                <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
-                            </label>
-                            <div class="md:flex items-start gap-2">
-                                <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
-                                <div class="">
-                                    <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
-                                    <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
-                                </div>
-                            </div>
-                            <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar Prioritas Program dan Kegiatan Desa berdasarkan kewenangan Pusat</h1>
-
-                            <div x-data="{ accordion : false }" class="bg-[#F7F6FF] border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
-                                <div class="space-y-3">
-                                    <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
-                                        <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
-                                        </svg>
-                                        <div class="flex items-start gap-1.5">
-                                            <span class="text-[10px] md:text-xs text-black font-medium">•</span>
-                                            <h1 class="text-[10px] md:text-xs text-black font-medium">Biaya Bantuan Operasional Pemdes ( 3% )</h1>
-                                        </div>
-                                    </div>
-                                    <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
-                                        <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
-                                        </label>
-                                        <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
-                                        </label>
-                                        <div class="md:flex items-start gap-2">
-                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
-                                            <div class="">
-                                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
-                                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div x-data="{ accordion : false }" class="bg-[#F7F6FF] border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
-                                <div class="space-y-3">
-                                    <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
-                                        <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
-                                        </svg>
-                                        <div class="flex items-start gap-1.5">
-                                            <span class="text-[10px] md:text-xs text-black font-medium">•</span>
-                                            <h1 class="text-[10px] md:text-xs text-black font-medium">BLT Miskin Ekstreme ( s/d 25% )</h1>
-                                        </div>
-                                    </div>
-                                    <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
-                                        <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
-                                        </label>
-                                        <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
-                                        </label>
-                                        <div class="md:flex items-start gap-2">
-                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
-                                            <div class="">
-                                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
-                                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    <div x-data="{ select : false }" class="md:hidden mb-2">
+        <button @click="select = !select" class="flex items-center gap-2 md:gap-3 bg-primary py-1.5 px-3 rounded md:rounded-md cursor-pointer">
+            <h1 class="text-[10px] md:text-xs text-white font-normal">Pilih point evaluasi</h1>
+            <svg class="w-[6px]" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.99999 4L0 0H6L2.99999 4Z" fill="white"/>
+            </svg> 
+        </button>
+        <div x-show="select" @click.outside="select = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': select, 'hidden': !select }" class="hidden absolute w-max md:w-52 mt-2 bg-white rounded shadow-md shadow-black/20">
+            <div class="bg-transparent py-2 px-4 hover:bg-[#EAEAEA] cursor-pointer">
+                <h1 class="text-[10px] md:text-xs text-[#778294] font-normal">A. Rancangan Peraturan Desa</h1>
             </div>
-            <div class="border border-[#E9E9E9] p-3 rounded-md md:rounded-lg space-y-3">
-                <div class="flex items-start gap-2 md:gap-3">
-                    <span class="text-[10px] md:text-xs text-black font-medium">2.</span>
-                    <div x-data="{ selected: null }" class="space-y-3">
-                        <h1 class="text-[10px] md:text-xs text-black font-medium">Rumusan Prioritas Program Pembangunan</h1>
-                        <label class="flex justify-normal items-center gap-2">
-                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
-                        </label>
-                        <label class="flex justify-normal items-center gap-2">
-                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
-                        </label>
-                        <div class="md:flex items-start gap-2">
-                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
-                            <div class="">
-                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
-                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
-                            </div>
-                        </div>
-                        <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar No Rancangan Perdes RKP Desa</h1>
-                    </div>
-                </div>
-                <div x-data="{ accordion : false }" class="border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
-                    <div class="space-y-3">
-                        <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
-                            <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
-                            </svg>
-                            <div class="flex items-start gap-1.5">
-                                <span class="text-[10px] md:text-xs text-black font-medium">•</span>
-                                <h1 class="text-[10px] md:text-xs text-black font-medium">Prioritas Program dan Kegiatan Desa berdasarkan kewenangan Pusat</h1>
-                            </div>
-                        </div>
-                        
-                        <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
+            <div class="bg-transparent py-2 px-4 hover:bg-[#EAEAEA] cursor-pointer">
+                <h1 class="text-[10px] md:text-xs text-[#778294] font-normal">B. Rancangan Peraturan Desa</h1>
+            </div>
+            <div class="bg-transparent py-2 px-4 hover:bg-[#EAEAEA] cursor-pointer">
+                <h1 class="text-[10px] md:text-xs text-[#778294] font-normal">C. Rancangan Peraturan Desa</h1>
+            </div>
+        </div>
+    </div>
+    <div x-show="tab == 1" x-transition.duration.300ms.opacity.50 :class="{ 'block': tab, 'hidden': !tab }" class="hidden w-full bg-white p-3 md:p-4 rounded-md md:rounded-lg">
+        <div x-data="{ accordion : true }" class="space-y-3">
+            <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
+                </svg>
+                <h1 class="text-xs md:text-sm text-black font-semibold">A. RANCANGAN PERATURAN DESA</h1>
+            </div>
+
+            <div x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden space-y-3">
+                <div class="border border-[#E9E9E9] p-3 rounded-md md:rounded-lg space-y-3">
+                    <div class="flex items-start gap-2 md:gap-3">
+                        <span class="text-[10px] md:text-xs text-black font-medium">1.</span>
+                        <div x-data="{ selected: null }" class="space-y-3">
+                            <h1 class="text-[10px] md:text-xs text-black font-medium">Rumusan Prioritas Program Pembangunan</h1>
                             <label class="flex justify-normal items-center gap-2">
                                 <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
                                 <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
@@ -213,64 +115,214 @@
                                     <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
                                 </div>
                             </div>
-                            <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar Prioritas Program dan Kegiatan Desa berdasarkan kewenangan Pusat</h1>
+                            <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar No Rancangan Perdes RKP Desa</h1>
+                        </div>
+                    </div>
+                    <div x-data="{ accordion : false }" class="border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
+                        <div class="space-y-3">
+                            <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                                <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
+                                </svg>
+                                <div class="flex items-start gap-1.5">
+                                    <span class="text-[10px] md:text-xs text-black font-medium">•</span>
+                                    <h1 class="text-[10px] md:text-xs text-black font-medium">Prioritas Program dan Kegiatan Desa berdasarkan kewenangan Pusat</h1>
+                                </div>
+                            </div>
+                            
+                            <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
+                                <label class="flex justify-normal items-center gap-2">
+                                    <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                    <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
+                                </label>
+                                <label class="flex justify-normal items-center gap-2">
+                                    <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                    <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                </label>
+                                <div class="md:flex items-start gap-2">
+                                    <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                    <div class="">
+                                        <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                        <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                    </div>
+                                </div>
+                                <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar Prioritas Program dan Kegiatan Desa berdasarkan kewenangan Pusat</h1>
 
-                            <div x-data="{ accordion : false }" class="bg-[#F7F6FF] border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
-                                <div class="space-y-3">
-                                    <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
-                                        <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
-                                        </svg>
-                                        <div class="flex items-start gap-1.5">
-                                            <span class="text-[10px] md:text-xs text-black font-medium">•</span>
-                                            <h1 class="text-[10px] md:text-xs text-black font-medium">Biaya Bantuan Operasional Pemdes ( 3% )</h1>
+                                <div x-data="{ accordion : false }" class="bg-[#F7F6FF] border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
+                                    <div class="space-y-3">
+                                        <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                                            <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
+                                            </svg>
+                                            <div class="flex items-start gap-1.5">
+                                                <span class="text-[10px] md:text-xs text-black font-medium">•</span>
+                                                <h1 class="text-[10px] md:text-xs text-black font-medium">Biaya Bantuan Operasional Pemdes ( 3% )</h1>
+                                            </div>
+                                        </div>
+                                        <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
+                                            <label class="flex justify-normal items-center gap-2">
+                                                <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
+                                            </label>
+                                            <label class="flex justify-normal items-center gap-2">
+                                                <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                            </label>
+                                            <div class="md:flex items-start gap-2">
+                                                <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                                <div class="">
+                                                    <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                                    <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
-                                        <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
-                                        </label>
-                                        <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
-                                        </label>
-                                        <div class="md:flex items-start gap-2">
-                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
-                                            <div class="">
-                                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
-                                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                </div>
+
+                                <div x-data="{ accordion : false }" class="bg-[#F7F6FF] border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
+                                    <div class="space-y-3">
+                                        <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                                            <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
+                                            </svg>
+                                            <div class="flex items-start gap-1.5">
+                                                <span class="text-[10px] md:text-xs text-black font-medium">•</span>
+                                                <h1 class="text-[10px] md:text-xs text-black font-medium">BLT Miskin Ekstreme ( s/d 25% )</h1>
+                                            </div>
+                                        </div>
+                                        <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
+                                            <label class="flex justify-normal items-center gap-2">
+                                                <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
+                                            </label>
+                                            <label class="flex justify-normal items-center gap-2">
+                                                <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                            </label>
+                                            <div class="md:flex items-start gap-2">
+                                                <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                                <div class="">
+                                                    <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                                    <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-[#E9E9E9] p-3 rounded-md md:rounded-lg space-y-3">
+                    <div class="flex items-start gap-2 md:gap-3">
+                        <span class="text-[10px] md:text-xs text-black font-medium">2.</span>
+                        <div x-data="{ selected: null }" class="space-y-3">
+                            <h1 class="text-[10px] md:text-xs text-black font-medium">Rumusan Prioritas Program Pembangunan</h1>
+                            <label class="flex justify-normal items-center gap-2">
+                                <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
+                            </label>
+                            <label class="flex justify-normal items-center gap-2">
+                                <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                            </label>
+                            <div class="md:flex items-start gap-2">
+                                <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                <div class="">
+                                    <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                    <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                </div>
+                            </div>
+                            <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar No Rancangan Perdes RKP Desa</h1>
+                        </div>
+                    </div>
+                    <div x-data="{ accordion : false }" class="border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
+                        <div class="space-y-3">
+                            <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                                <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
+                                </svg>
+                                <div class="flex items-start gap-1.5">
+                                    <span class="text-[10px] md:text-xs text-black font-medium">•</span>
+                                    <h1 class="text-[10px] md:text-xs text-black font-medium">Prioritas Program dan Kegiatan Desa berdasarkan kewenangan Pusat</h1>
+                                </div>
+                            </div>
+                            
+                            <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
+                                <label class="flex justify-normal items-center gap-2">
+                                    <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                    <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
+                                </label>
+                                <label class="flex justify-normal items-center gap-2">
+                                    <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                    <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                </label>
+                                <div class="md:flex items-start gap-2">
+                                    <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                    <div class="">
+                                        <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                        <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                    </div>
+                                </div>
+                                <h1 class="text-[10px] md:text-xs text-[#BABABA] font-normal">Tingkat Daftar Prioritas Program dan Kegiatan Desa berdasarkan kewenangan Pusat</h1>
 
-                            <div x-data="{ accordion : false }" class="bg-[#F7F6FF] border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
-                                <div class="space-y-3">
-                                    <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
-                                        <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
-                                        </svg>
-                                        <div class="flex items-start gap-1.5">
-                                            <span class="text-[10px] md:text-xs text-black font-medium">•</span>
-                                            <h1 class="text-[10px] md:text-xs text-black font-medium">BLT Miskin Ekstreme ( s/d 25% )</h1>
+                                <div x-data="{ accordion : false }" class="bg-[#F7F6FF] border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
+                                    <div class="space-y-3">
+                                        <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                                            <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
+                                            </svg>
+                                            <div class="flex items-start gap-1.5">
+                                                <span class="text-[10px] md:text-xs text-black font-medium">•</span>
+                                                <h1 class="text-[10px] md:text-xs text-black font-medium">Biaya Bantuan Operasional Pemdes ( 3% )</h1>
+                                            </div>
+                                        </div>
+                                        <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
+                                            <label class="flex justify-normal items-center gap-2">
+                                                <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
+                                            </label>
+                                            <label class="flex justify-normal items-center gap-2">
+                                                <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                            </label>
+                                            <div class="md:flex items-start gap-2">
+                                                <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                                <div class="">
+                                                    <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                                    <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
-                                        <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
-                                        </label>
-                                        <label class="flex justify-normal items-center gap-2">
-                                            <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
-                                            <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
-                                        </label>
-                                        <div class="md:flex items-start gap-2">
-                                            <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
-                                            <div class="">
-                                                <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
-                                                <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                </div>
+
+                                <div x-data="{ accordion : false }" class="bg-[#F7F6FF] border border-[#E9E9E9] p-3 rounded-md md:rounded-lg">
+                                    <div class="space-y-3">
+                                        <div @click="accordion = !accordion" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                                            <svg class="w-3 md:w-4 fill-[#2D264B]" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0327 1.59046C12.3243 1.29626 12.3222 0.821393 12.028 0.529809C11.7338 0.238226 11.2589 0.240344 10.9673 0.534541L9.22 2.29751C8.51086 3.013 8.02282 3.50381 7.6093 3.83591C7.2076 4.1585 6.94958 4.26918 6.7185 4.29863C6.57341 4.31712 6.42659 4.31712 6.2815 4.29863C6.05042 4.26918 5.7924 4.15851 5.39071 3.83591C4.97718 3.50381 4.48914 3.01301 3.78 2.29751L2.03269 0.534542C1.74111 0.240345 1.26624 0.238226 0.972041 0.52981C0.677844 0.821394 0.675726 1.29626 0.967309 1.59046L2.74609 3.38519C3.41604 4.06116 3.96359 4.61364 4.45146 5.00544C4.95879 5.41287 5.47373 5.70781 6.09184 5.78659C6.36287 5.82114 6.63714 5.82114 6.90816 5.78659C7.52628 5.70781 8.04122 5.41287 8.54854 5.00544C9.03641 4.61364 9.58396 4.06117 10.2539 3.38519L12.0327 1.59046Z"/>
+                                            </svg>
+                                            <div class="flex items-start gap-1.5">
+                                                <span class="text-[10px] md:text-xs text-black font-medium">•</span>
+                                                <h1 class="text-[10px] md:text-xs text-black font-medium">BLT Miskin Ekstreme ( s/d 25% )</h1>
+                                            </div>
+                                        </div>
+                                        <div x-data="{ selected: null }" x-show="accordion" @click.outside="accordion = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': accordion, 'hidden': !accordion }" class="hidden ml-5 space-y-3">
+                                            <label class="flex justify-normal items-center gap-2">
+                                                <input type="checkbox" :checked="selected === 1" @click="selected = selected === 1 ? null : 1" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Dilaksanakan (ada dokumen)</h1>
+                                            </label>
+                                            <label class="flex justify-normal items-center gap-2">
+                                                <input type="checkbox" :checked="selected === 2" @click="selected = selected === 2 ? null : 2" class="peer/checkbox appearance-none checked:bg-primary rounded-md bg-transparent border-gray-500 checked:border-primary ring-primary checked:ring-primary">
+                                                <h1 class="text-[10px] md:text-xs text-gray-500 peer-checked/checkbox:text-primary font-medium">Tidak dilaksanakan / tidak ada dokumen</h1>
+                                            </label>
+                                            <div class="md:flex items-start gap-2">
+                                                <span class="text-xs md:text-sm text-black font-medium">Keterangan</span>
+                                                <div class="">
+                                                    <textarea rows="2" class="w-full resize-none transition-colors duration-500 bg-transparent p-1 overflow-hidden border-x-0 border-t-0 border-b border-[#ABABAB] focus:border-black focus:outline-none focus:ring-0 text-[#ABABAB] focus:text-black text-[10px] md:text-xs font-normal placeholder:text-[10px] md:placeholder:text-xs focus:placeholder:text-black placeholder:font-normal" placeholder="Isi keterangan"></textarea>
+                                                    <h1 class="invisible line-clamp-1 w-full text-[10px] md:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus quam perspiciatis, repellat odio nihil possimus in esse tempora non quibusdam consequuntur nemo. Odio distinctio possimus porro voluptatum ab aliquam.</h1>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
