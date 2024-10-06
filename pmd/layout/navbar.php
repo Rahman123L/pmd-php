@@ -536,21 +536,81 @@
                         </a>
                     </div>
                 </div>
-                <div x-data="{ notif : false }" x-show="notif" :class="{ 'block': notif, 'hidden': !notif }" class="hidden w-max absolute right-0">
-                    <div class="w-56 md:w-72 flex justify-between items-center bg-[#CEFFE8] py-2 md:py-2.5 px-3 md:px-4 rounded md:rounded-md shadow-md shadow-black/20">
-                        <div class="flex items-center gap-2 md:gap-3">
-                            <svg class="w-4 md:w-5 fill-[#059669]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.6 14.6L15.65 7.55L14.25 6.15L8.6 11.8L5.75 8.95L4.35 10.35L8.6 14.6ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z"/>
+                <div x-data="{ notif : true }" x-show="notif" :class="{ 'block': notif, 'hidden': !notif }" class="hidden w-max absolute right-0 space-y-1.5">
+                    <div class="relative w-56 md:w-72 bg-[#242C32] overflow-hidden rounded md:rounded-md shadow-md shadow-black/20">
+                        <div class="flex justify-between items-center py-2 md:py-2.5 px-3 md:px-4">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <svg class="w-4 md:w-5 fill-[#FFD21F] ring-4 ring-gray-700 shadow-middle shadow-[#FFD21F] rounded-full" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 0C4.98 0 0.5 4.48 0.5 10C0.5 15.52 4.98 20 10.5 20C16.02 20 20.5 15.52 20.5 10C20.5 4.48 16.02 0 10.5 0ZM11.5 15H9.5V13H11.5V15ZM11.5 11H9.5V5H11.5V11Z"/>
+                                </svg>
+                                <div class="">
+                                    <h1 class="text-[10px] md:text-xs text-white font-bold">Warning</h1>
+                                    <p class="text-[8px] md:text-[10px] text-[#C8C5C5] font-normal">Profile perlu diganti</p>
+                                </div>
+                            </div>
+                            <svg @click="notif = false" class="w-4 md:w-5 fill-[#FC5E5E] cursor-pointer" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.1516 9.65165C14.4445 9.35876 14.4445 8.88388 14.1516 8.59099C13.8588 8.2981 13.3839 8.2981 13.091 8.59099L11.5 10.182L9.90901 8.59099C9.61612 8.2981 9.14124 8.2981 8.84835 8.59099C8.55546 8.88388 8.55546 9.35876 8.84835 9.65165L10.4393 11.2426L8.84835 12.8336C8.55546 13.1265 8.55546 13.6014 8.84835 13.8943C9.14124 14.1872 9.61612 14.1872 9.90901 13.8943L11.5 12.3033L13.091 13.8943C13.3839 14.1872 13.8588 14.1872 14.1517 13.8943C14.4445 13.6014 14.4445 13.1265 14.1517 12.8336L12.5607 11.2426L14.1516 9.65165Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0.25C5.56294 0.25 0.75 5.06294 0.75 11C0.75 16.9371 5.56294 21.75 11.5 21.75C17.4371 21.75 22.25 16.9371 22.25 11C22.25 5.06294 17.4371 0.25 11.5 0.25ZM2.25 11C2.25 5.89137 6.39137 1.75 11.5 1.75C16.6086 1.75 20.75 5.89137 20.75 11C20.75 16.1086 16.6086 20.25 11.5 20.25C6.39137 20.25 2.25 16.1086 2.25 11Z"/>
                             </svg>
-                            <h1 class="text-[10px] md:text-xs text-[#059669] font-medium">
-                                <!-- Berhasil mengubah profile -->
-                                <!-- Berhasil mengubah password -->
-                                Berhasil mengunggah laporan
-                            </h1>
                         </div>
-                        <svg @click="notif = false" class="w-2.5 md:w-3 fill-[#8B8B8B] cursor-pointer" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.0204 1.68705C11.2157 1.49179 11.2157 1.1752 11.0204 0.979943C10.8251 0.784681 10.5086 0.784681 10.3133 0.979943L6.00017 5.29307L1.68705 0.979945C1.49179 0.784683 1.1752 0.784683 0.979943 0.979945C0.784681 1.17521 0.784681 1.49179 0.979943 1.68705L5.29306 6.00017L0.979961 10.3133C0.784699 10.5085 0.784699 10.8251 0.979961 11.0204C1.17522 11.2156 1.49181 11.2156 1.68707 11.0204L6.00017 6.70728L10.3133 11.0204C10.5085 11.2156 10.8251 11.2156 11.0204 11.0204C11.2156 10.8251 11.2156 10.5085 11.0204 10.3133L6.70728 6.00017L11.0204 1.68705Z"/>
-                        </svg>
+                        <div class="border-b-[3px] border-[#FFD21F]"></div>
+                    </div>
+
+                    <div class="relative w-56 md:w-72 bg-[#242C32] overflow-hidden rounded md:rounded-md shadow-md shadow-black/20">
+                        <div class="flex justify-between items-center py-2 md:py-2.5 px-3 md:px-4">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <svg class="w-4 md:w-5 fill-[#01E17B] ring-4 ring-gray-700 shadow-middle shadow-[#01E17B] rounded-full" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.6 14.6L15.65 7.55L14.25 6.15L8.6 11.8L5.75 8.95L4.35 10.35L8.6 14.6ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z"/>
+                                </svg>
+                                <div class="">
+                                    <h1 class="text-[10px] md:text-xs text-white font-bold">Berhasil</h1>
+                                    <p class="text-[8px] md:text-[10px] text-[#C8C5C5] font-normal">Password anda berhasil diubah</p>
+                                </div>
+                            </div>
+                            <svg @click="notif = false" class="w-4 md:w-5 fill-[#FC5E5E] cursor-pointer" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.1516 9.65165C14.4445 9.35876 14.4445 8.88388 14.1516 8.59099C13.8588 8.2981 13.3839 8.2981 13.091 8.59099L11.5 10.182L9.90901 8.59099C9.61612 8.2981 9.14124 8.2981 8.84835 8.59099C8.55546 8.88388 8.55546 9.35876 8.84835 9.65165L10.4393 11.2426L8.84835 12.8336C8.55546 13.1265 8.55546 13.6014 8.84835 13.8943C9.14124 14.1872 9.61612 14.1872 9.90901 13.8943L11.5 12.3033L13.091 13.8943C13.3839 14.1872 13.8588 14.1872 14.1517 13.8943C14.4445 13.6014 14.4445 13.1265 14.1517 12.8336L12.5607 11.2426L14.1516 9.65165Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0.25C5.56294 0.25 0.75 5.06294 0.75 11C0.75 16.9371 5.56294 21.75 11.5 21.75C17.4371 21.75 22.25 16.9371 22.25 11C22.25 5.06294 17.4371 0.25 11.5 0.25ZM2.25 11C2.25 5.89137 6.39137 1.75 11.5 1.75C16.6086 1.75 20.75 5.89137 20.75 11C20.75 16.1086 16.6086 20.25 11.5 20.25C6.39137 20.25 2.25 16.1086 2.25 11Z"/>
+                            </svg>
+                        </div>
+                        <div class="border-b-[3px] border-[#01E17B]"></div>
+                    </div>
+
+                    <div class="relative w-56 md:w-72 bg-[#242C32] overflow-hidden rounded md:rounded-md shadow-md shadow-black/20">
+                        <div class="flex justify-between items-center py-2 md:py-2.5 px-3 md:px-4">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <svg class="w-4 md:w-5 fill-[#F04248] ring-4 ring-gray-700 shadow-middle shadow-[#F04248] rounded-full" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.9 15L10.5 11.4L14.1 15L15.5 13.6L11.9 10L15.5 6.4L14.1 5L10.5 8.6L6.9 5L5.5 6.4L9.1 10L5.5 13.6L6.9 15ZM10.5 20C9.11667 20 7.81667 19.7373 6.6 19.212C5.38333 18.6873 4.325 17.975 3.425 17.075C2.525 16.175 1.81267 15.1167 1.288 13.9C0.762667 12.6833 0.5 11.3833 0.5 10C0.5 8.61667 0.762667 7.31667 1.288 6.1C1.81267 4.88333 2.525 3.825 3.425 2.925C4.325 2.025 5.38333 1.31233 6.6 0.787C7.81667 0.262333 9.11667 0 10.5 0C11.8833 0 13.1833 0.262333 14.4 0.787C15.6167 1.31233 16.675 2.025 17.575 2.925C18.475 3.825 19.1873 4.88333 19.712 6.1C20.2373 7.31667 20.5 8.61667 20.5 10C20.5 11.3833 20.2373 12.6833 19.712 13.9C19.1873 15.1167 18.475 16.175 17.575 17.075C16.675 17.975 15.6167 18.6873 14.4 19.212C13.1833 19.7373 11.8833 20 10.5 20Z" fill="#F04248"/>
+                                </svg>
+                                <div class="">
+                                    <h1 class="text-[10px] md:text-xs text-white font-bold">Gagal</h1>
+                                    <p class="text-[8px] md:text-[10px] text-[#C8C5C5] font-normal">Username tidak ditemukan</p>
+                                </div>
+                            </div>
+                            <svg @click="notif = false" class="w-4 md:w-5 fill-[#FC5E5E] cursor-pointer" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.1516 9.65165C14.4445 9.35876 14.4445 8.88388 14.1516 8.59099C13.8588 8.2981 13.3839 8.2981 13.091 8.59099L11.5 10.182L9.90901 8.59099C9.61612 8.2981 9.14124 8.2981 8.84835 8.59099C8.55546 8.88388 8.55546 9.35876 8.84835 9.65165L10.4393 11.2426L8.84835 12.8336C8.55546 13.1265 8.55546 13.6014 8.84835 13.8943C9.14124 14.1872 9.61612 14.1872 9.90901 13.8943L11.5 12.3033L13.091 13.8943C13.3839 14.1872 13.8588 14.1872 14.1517 13.8943C14.4445 13.6014 14.4445 13.1265 14.1517 12.8336L12.5607 11.2426L14.1516 9.65165Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0.25C5.56294 0.25 0.75 5.06294 0.75 11C0.75 16.9371 5.56294 21.75 11.5 21.75C17.4371 21.75 22.25 16.9371 22.25 11C22.25 5.06294 17.4371 0.25 11.5 0.25ZM2.25 11C2.25 5.89137 6.39137 1.75 11.5 1.75C16.6086 1.75 20.75 5.89137 20.75 11C20.75 16.1086 16.6086 20.25 11.5 20.25C6.39137 20.25 2.25 16.1086 2.25 11Z"/>
+                            </svg>
+                        </div>
+                        <div class="border-b-[3px] border-[#F04248]"></div>
+                    </div>
+
+                    <div class="relative w-56 md:w-72 bg-[#242C32] overflow-hidden rounded md:rounded-md shadow-md shadow-black/20">
+                        <div class="flex justify-between items-center py-2 md:py-2.5 px-3 md:px-4">
+                            <div class="flex items-center gap-2 md:gap-3">
+                                <svg class="w-4 md:w-5 fill-[#008CFF] ring-4 ring-gray-700 shadow-middle shadow-[#008CFF] rounded-full" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 0C4.98 0 0.5 4.48 0.5 10C0.5 15.52 4.98 20 10.5 20C16.02 20 20.5 15.52 20.5 10C20.5 4.48 16.02 0 10.5 0ZM11.5 15H9.5V13H11.5V15ZM11.5 11H9.5V5H11.5V11Z"/>
+                                </svg>
+                                <div class="">
+                                    <h1 class="text-[10px] md:text-xs text-white font-bold">Info</h1>
+                                    <p class="text-[8px] md:text-[10px] text-[#C8C5C5] font-normal">Profile perlu diganti</p>
+                                </div>
+                            </div>
+                            <svg @click="notif = false" class="w-4 md:w-5 fill-[#FC5E5E] cursor-pointer" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.1516 9.65165C14.4445 9.35876 14.4445 8.88388 14.1516 8.59099C13.8588 8.2981 13.3839 8.2981 13.091 8.59099L11.5 10.182L9.90901 8.59099C9.61612 8.2981 9.14124 8.2981 8.84835 8.59099C8.55546 8.88388 8.55546 9.35876 8.84835 9.65165L10.4393 11.2426L8.84835 12.8336C8.55546 13.1265 8.55546 13.6014 8.84835 13.8943C9.14124 14.1872 9.61612 14.1872 9.90901 13.8943L11.5 12.3033L13.091 13.8943C13.3839 14.1872 13.8588 14.1872 14.1517 13.8943C14.4445 13.6014 14.4445 13.1265 14.1517 12.8336L12.5607 11.2426L14.1516 9.65165Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0.25C5.56294 0.25 0.75 5.06294 0.75 11C0.75 16.9371 5.56294 21.75 11.5 21.75C17.4371 21.75 22.25 16.9371 22.25 11C22.25 5.06294 17.4371 0.25 11.5 0.25ZM2.25 11C2.25 5.89137 6.39137 1.75 11.5 1.75C16.6086 1.75 20.75 5.89137 20.75 11C20.75 16.1086 16.6086 20.25 11.5 20.25C6.39137 20.25 2.25 16.1086 2.25 11Z"/>
+                            </svg>
+                        </div>
+                        <div class="border-b-[3px] border-[#008CFF]"></div>
                     </div>
                 </div>
             </div>

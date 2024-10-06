@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>-</title>
 
-    <link href="/style.css" rel="stylesheet">
-    <link href="/svgs/logo.svg" rel="shortcut icon" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <link href="svgs/logo.svg" rel="shortcut icon" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
 
@@ -41,4 +41,4 @@
     </script>
 </head>
 
-<body class="bg-[#FFFFFF]">
+<body class="bg-white">
