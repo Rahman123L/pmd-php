@@ -536,7 +536,7 @@
                         </a>
                     </div>
                 </div>
-                <div x-data="{ notif : true }" x-show="notif" :class="{ 'block': notif, 'hidden': !notif }" class="hidden w-max absolute right-0 space-y-1.5">
+                <div x-data="{ notif : false }" x-show="notif" :class="{ 'block': notif, 'hidden': !notif }" class="hidden w-max absolute right-0 space-y-1.5">
                     <div class="relative w-56 md:w-72 bg-[#242C32] overflow-hidden rounded md:rounded-md shadow-md shadow-black/20">
                         <div class="flex justify-between items-center py-2 md:py-2.5 px-3 md:px-4">
                             <div class="flex items-center gap-2 md:gap-3">
