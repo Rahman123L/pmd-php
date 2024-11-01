@@ -42,7 +42,7 @@
     <div class="grid gap-2 py-2 px-5">
         <label class="grid md:flex items-center gap-1 md:gap-[81px]">
             <h1 class="text-[10px] md:text-xs text-black font-normal capitalize">Id</h1>
-            <input type="text" placeholder="01.2024.01" class="w-[60%] md:w-fit bg-white py-1.5 px-3 border border-[#DCDBDB] rounded-lg shadow-md text-[10px] md:text-xs text-black font-normal capitalize placeholder:text-black focus:ring-0 focus:border-[#DCDBDB]">
+            <input type="text" value="01.2024.01" class="w-[60%] md:w-fit bg-white py-1.5 px-3 border border-[#DCDBDB] rounded-lg shadow-md text-[10px] md:text-xs text-black font-normal capitalize placeholder:text-black focus:ring-0 focus:border-[#DCDBDB]">
         </label>
         <label class="grid md:flex items-center gap-1 md:gap-[26px]">
             <h1 class="text-[10px] md:text-xs text-black font-normal capitalize">Nama Paket</h1>

@@ -33,7 +33,7 @@
         <div class="grid gap-2">
             <label class="grid md:flex items-center gap-1 md:gap-6">
                 <h1 class="text-[10px] md:text-xs text-black font-normal capitalize">Kode Kegiatan</h1>
-                <input type="text" placeholder="01.2024.01" class="w-[60%] md:w-fit bg-white py-1.5 px-3 border border-[#DCDBDB] rounded-lg shadow-md text-[10px] md:text-xs text-black font-normal capitalize placeholder:text-black focus:ring-0 focus:border-[#DCDBDB]">
+                <input type="text" value="01.2024.01" class="w-[60%] md:w-fit bg-white py-1.5 px-3 border border-[#DCDBDB] rounded-lg shadow-md text-[10px] md:text-xs text-black font-normal capitalize placeholder:text-black focus:ring-0 focus:border-[#DCDBDB]">
             </label>
             <label class="grid md:flex items-center gap-1 md:gap-5">
                 <h1 class="text-[10px] md:text-xs text-black font-normal capitalize">Nama Kegiatan</h1>
