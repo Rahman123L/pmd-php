@@ -24,7 +24,7 @@
                 </svg>
                 <h1 class="text-center text-sm md:text-base text-black font-medium">Kegiatan</h1>
             </a>
-            <a href="#" class="bg-white p-5 rounded-md shadow-lg space-y-3">
+            <a href="../desa/pendapatan.php" class="bg-white p-5 rounded-md shadow-lg space-y-3">
                 <svg class="w-9 md:w-10 stroke-green-600 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.4142 10.4142C18 9.82843 18 8.88562 18 7C18 5.11438 18 4.17157 17.4142 3.58579M17.4142 10.4142C16.8284 11 15.8856 11 14 11H10C8.11438 11 7.17157 11 6.58579 10.4142M17.4142 10.4142C17.4142 10.4142 17.4142 10.4142 17.4142 10.4142ZM17.4142 3.58579C16.8284 3 15.8856 3 14 3L10 3C8.11438 3 7.17157 3 6.58579 3.58579M17.4142 3.58579C17.4142 3.58579 17.4142 3.58579 17.4142 3.58579ZM6.58579 3.58579C6 4.17157 6 5.11438 6 7C6 8.88562 6 9.82843 6.58579 10.4142M6.58579 3.58579C6.58579 3.58579 6.58579 3.58579 6.58579 3.58579ZM6.58579 10.4142C6.58579 10.4142 6.58579 10.4142 6.58579 10.4142Z" stroke-width="1.5"/>
                     <path d="M13 7C13 7.55228 12.5523 8 12 8C11.4477 8 11 7.55228 11 7C11 6.44772 11.4477 6 12 6C12.5523 6 13 6.44772 13 7Z" stroke-width="1.5"/>
@@ -36,7 +36,7 @@
                 </svg>
                 <h1 class="text-center text-sm md:text-base text-black font-medium">Pendapatan</h1>
             </a>
-            <a href="#" class="bg-white p-5 rounded-md shadow-lg space-y-3">
+            <a href="../desa/belanja.php" class="bg-white p-5 rounded-md shadow-lg space-y-3">
                 <svg class="w-9 md:w-10 stroke-red-500 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z" stroke-width="1.5"/>
                     <path d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z" stroke-width="1.5"/>
@@ -46,7 +46,7 @@
                 </svg>
                 <h1 class="text-center text-sm md:text-base text-black font-medium">Belanja</h1>
             </a>
-            <a href="#" class="bg-white p-5 rounded-md shadow-lg space-y-3">
+            <a href="../desa/pembiayaan.php" class="bg-white p-5 rounded-md shadow-lg space-y-3">
                 <svg class="w-9 md:w-10 stroke-orange-500 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 22H21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M3 17C3 17.9428 3 18.4142 3.29289 18.7071C3.58579 19 4.05719 19 5 19C5.94281 19 6.41421 19 6.70711 18.7071C7 18.4142 7 17.9428 7 17V11C7 10.0572 7 9.58579 6.70711 9.29289C6.41421 9 5.94281 9 5 9C4.05719 9 3.58579 9 3.29289 9.29289C3 9.58579 3 10.0572 3 11V13" stroke-width="1.5" stroke-linecap="round"/>
@@ -55,7 +55,7 @@
                 </svg>
                 <h1 class="text-center text-sm md:text-base text-black font-medium">Pembiayaan</h1>
             </a>
-            <a href="#" class="bg-white p-5 rounded-md shadow-lg space-y-3">
+            <a href="../desa/pembiayaan2.php" class="bg-white p-5 rounded-md shadow-lg space-y-3">
                 <svg class="w-9 md:w-10 stroke-yellow-300 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 22H2" stroke-width="1.5" stroke-linecap="round"/>
                     <path d="M21 22V14.5C21 13.6716 20.3284 13 19.5 13H16.5C15.6716 13 15 13.6716 15 14.5V22" stroke-width="1.5"/>

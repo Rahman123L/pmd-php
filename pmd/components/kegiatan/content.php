@@ -45,7 +45,7 @@
                     <button type="button" class="bg-white py-1.5 px-4 rounded md:rounded-md shadow-md">
                         <h1 class="text-[10px] md:text-xs text-black font-medium capitalize">Tambah Tabel</h1>
                     </button>
-                    <button type="button" @click="if(step < 4) step++" :disabled="step === 4" :class="step === 4 ? 'cursor-not-allowed bg-opacity-50' : ''" class="bg-primary py-1.5 px-4 rounded md:rounded-md shadow-md">
+                    <button type="button" class="bg-primary py-1.5 px-4 rounded md:rounded-md shadow-md">
                         <h1 class="text-[10px] md:text-xs text-white font-medium capitalize">Simpan</h1>
                     </button>
                 </div>

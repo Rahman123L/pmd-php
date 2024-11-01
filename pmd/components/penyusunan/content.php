@@ -2,13 +2,33 @@
 <div x-data="{ isOpenn : true }">
     <?php include_once("../pmd/layout/sidebar.php"); ?>
     
-    <main :class="isOpenn ? 'md:ml-60' : 'md:ml-20 ' + 'transition-all duration-500'" class="relative md:ml-60 pt-16 p-5 space-y-5">
+    <main x-data="{ isOpen : false }" :class="isOpenn ? 'md:ml-60' : 'md:ml-20 ' + 'transition-all duration-500'" class="relative md:ml-60 pt-16 p-5 space-y-5">
         <div class="md:flex justify-between items-center">
             <h1 class="text-base md:text-lg lg:text-xl text-black font-medium">Penyusunan APBDES</h1>
             <h1 class="text-xs md:text-sm text-black font-medium"><span class="text-primary font-medium">Home</span> / Penyusunan APBDES</h1>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="w-full md:w-[60%] lg:w-[40%] bg-white py-5 md:py-6 px-5 space-y-2 rounded md:rounded-md shadow-md shadow-black/5">
+            <h1 class="text-xs md:text-sm text-black font-normal">Silahkan Pilih <span class="text-[#EA5858] font-medium">Desa</span></h1>
+            <button @click="isOpen = !isOpen" class="flex items-center gap-1 md:gap-2 bg-primary py-1.5 px-4 rounded">
+                <h1 class="text-xs md:text-sm text-white font-medium">Pilih Desa</h1>
+                <svg :class="{ 'rotate-90 ' : isOpen }"  class="w-4 stroke-white stroke-[2]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 5L15 12L9 19" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <?php include_once("../pmd/components/desa/content.php") ?>
+        <div :class="isOpen ? 'hidden' : 'block'" class="flex justify-center items-center pt-10">
+            <div class="space-y-2">
+                <img class="w-28 md:w-32 h-28 md:h-32 mx-auto" src="/svgs/search.svg">
+                <div class="text-center">
+                    <h1 class="text-lg md:text-xl text-black font-medium">Desa Tidak Ditemukan</h1>
+                    <h1 class="text-[10px] md:text-xs text-[#7A7A7A] font-normal">Pilih Desa untuk memunculkan data</h1>
+                </div>
+            </div>
+        </div>
+
+        <div x-show="isOpen" class="grid grid-cols-1 md:grid-cols-3 gap-5">
             <a href="../pmd/kegiatan.php" class="bg-white p-5 rounded-md shadow-lg space-y-3">
                 <svg class="w-9 md:w-10 stroke-primary mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12V14C22 17.7712 22 19.6569 20.8284 20.8284C20.1752 21.4816 19.3001 21.7706 18 21.8985" stroke-width="1.5" stroke-linecap="round"/>
