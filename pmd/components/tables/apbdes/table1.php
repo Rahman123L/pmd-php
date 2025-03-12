@@ -7,12 +7,16 @@
     <table class="w-max lg:w-full bg-white text-center table-auto">
         <tr class="text-[10px] md:text-xs text-black capitalize">
             <th class="w-[5%] bg-white font-normal py-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">No</th>
-            <th class="w-[60%] bg-white text-start font-normal p-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">Nama</th>
+            <th class="w-[20%] bg-white text-start font-normal p-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">Desa</th>
+            <th class="w-[60%] bg-white text-start font-normal p-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">File</th>
             <th class="w-[10%] bg-white font-normal p-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">Status</th>
             <th class="w-[10%] bg-white font-normal p-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">Aksi</th>
         </tr>
         <tr class="odd:bg-white even:bg-[#E8EDF2] text-xs text-black/70 capitalize overflow-visible">
             <td class="font-normal my-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">1</td>
+            <td class="py-3.5 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
+                <h1 class="line-clamp-1 text-start px-4 font-normal">Sibargot</h1>
+            </td>
             <td class="py-3.5 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
                 <h1 class="line-clamp-1 text-start px-4 font-normal">Kebaikan Alam</h1>
             </td>
@@ -36,6 +40,9 @@
         <tr class="odd:bg-white even:bg-[#E8EDF2] text-xs text-black/70 capitalize overflow-visible">
             <td class="font-normal my-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">2</td>
             <td class="py-3.5 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
+                <h1 class="line-clamp-1 text-start px-4 font-normal">Sibargot</h1>
+            </td>
+            <td class="py-3.5 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
                 <h1 class="line-clamp-1 text-start px-4 font-normal">Kebaikan Alam</h1>
             </td>
             <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
@@ -58,6 +65,9 @@
         <tr class="odd:bg-white even:bg-[#E8EDF2] text-xs text-black/70 capitalize overflow-visible">
             <td class="font-normal my-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">3</td>
             <td class="py-3.5 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
+                <h1 class="line-clamp-1 text-start px-4 font-normal">Sibargot</h1>
+            </td>
+            <td class="py-3.5 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
                 <h1 class="line-clamp-1 text-start px-4 font-normal">Kebaikan Alam</h1>
             </td>
             <td class="font-normal m-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
@@ -79,6 +89,9 @@
         </tr>
         <tr class="odd:bg-white even:bg-[#E8EDF2] text-xs text-black/70 capitalize overflow-visible">
             <td class="font-normal my-4 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">4</td>
+            <td class="py-3.5 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
+                <h1 class="line-clamp-1 text-start px-4 font-normal">Sibargot</h1>
+            </td>
             <td class="py-3.5 first:pl-4 last:pr-4 last:pl-4 last:relative last:right-0">
                 <h1 class="line-clamp-1 text-start px-4 font-normal">Kebaikan Alam</h1>
             </td>
