@@ -20,11 +20,8 @@
         theme: {
             extend: {
                 colors: {
-                    primary: '#075E54',
-                    secondary: '#EFC118',
-                },
-                boxShadow: {
-                    middle: '0px 0px 40px 1px rgba(0, 0, 0, 0.25)',
+                    primary: '#9A207F',
+                    secondary: '#54155E',
                 },
                 keyframes: {
                     fadeIn: {
@@ -41,4 +38,4 @@
     </script>
 </head>
 
-<body class="bg-gradient-to-r from-[#22207D] to-[#4A46FF]">
+<body class="bg-gradient-to-r from-[#058646] to-[#058646]">

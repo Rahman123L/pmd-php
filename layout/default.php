@@ -20,11 +20,8 @@
         theme: {
             extend: {
                 colors: {
-                    primary: '#075E54',
-                    secondary: '#EFC118',
-                },
-                boxShadow: {
-                    middle: '0px 0px 40px 1px rgba(0, 0, 0, 0.25)',
+                    primary: '#9A207F',
+                    secondary: '#54155E',
                 },
                 keyframes: {
                     fadeIn: {

@@ -14,33 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script>
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                colors: {
-                    primary: '#9A207F',
-                    secondary: '#54155E',
-                    tertiary: '#FF4E4E',
-                },
-                boxShadow: {
-                    middle: '0px 0px 40px 1px rgba(0, 0, 0, 0.25)',
-                },
-                keyframes: {
-                    fadeIn: {
-                        '0%': { opacity: 0 },
-                        '100%': { opacity: 1 },
-                    },
-                },
-                animation: {
-                    fadeIn: "fadeIn 2s forwards",
-                },
-            },
-        },
-    };
-    </script>
+    <script src="/js/tailwind.js"></script>
 </head>
 
 <body x-data="{ isOpen : window.innerWidth >= 786 }" @resize.window="isOpen = window.innerWidth >= 786" class="bg-[#ECE5DD]">

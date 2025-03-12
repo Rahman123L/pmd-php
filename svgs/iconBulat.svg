@@ -23,11 +23,11 @@
 <circle cx="1221.2" cy="733.428" r="3.5" fill="#BCBCFF"/>
 <circle cx="1264.8" cy="714.428" r="3.5" fill="#BCBCFF"/>
 <circle cx="1243" cy="733.428" r="3.5" fill="#BCBCFF"/>
-<circle cx="469.5" cy="597.5" r="10.5" stroke="#7C7CFF" stroke-width="4"/>
-<circle cx="726" cy="247.766" r="10.5" stroke="#7C7CFF" stroke-width="4"/>
-<circle cx="1093.03" cy="365.766" r="10.5" stroke="#7C7CFF" stroke-width="4"/>
-<circle cx="1346.5" cy="695.428" r="10.5" stroke="#7C7CFF" stroke-width="4"/>
-<circle cx="375.5" cy="13.1783" r="10.5" stroke="#7C7CFF" stroke-width="4"/>
-<rect x="794" y="514.816" width="24" height="24" transform="rotate(45 794 514.816)" stroke="#7C7CFF" stroke-width="4"/>
-<rect x="1161.29" y="560.73" width="24" height="24" transform="rotate(45 1161.29 560.73)" stroke="#7C7CFF" stroke-width="4"/>
+<circle cx="469.5" cy="597.5" r="10.5" stroke="#2C8379" stroke-width="4"/>
+<circle cx="726" cy="247.766" r="10.5" stroke="#2C8379" stroke-width="4"/>
+<circle cx="1093.03" cy="365.766" r="10.5" stroke="#2C8379" stroke-width="4"/>
+<circle cx="1346.5" cy="695.428" r="10.5" stroke="#2C8379" stroke-width="4"/>
+<circle cx="375.5" cy="13.1783" r="10.5" stroke="#2C8379" stroke-width="4"/>
+<rect x="794" y="514.816" width="24" height="24" transform="rotate(45 794 514.816)" stroke="#2C8379" stroke-width="4"/>
+<rect x="1161.29" y="560.73" width="24" height="24" transform="rotate(45 1161.29 560.73)" stroke="#2C8379" stroke-width="4"/>
 </svg>

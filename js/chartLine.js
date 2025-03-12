@@ -1,8 +1,8 @@
 var ctx = document.getElementById("chartLine").getContext("2d");
 
 var gradient = ctx.createLinearGradient(2, 10, 10, 120);
-gradient.addColorStop(0, "rgba(93, 135, 255, 0.3)");
-gradient.addColorStop(1, "rgba(93, 135, 255, 0)");
+gradient.addColorStop(0, "rgb(154, 32, 127, 0.3)");
+gradient.addColorStop(1, "rgb(154, 32, 127, 0)");
 
 const chartLine = new Chart(ctx, {
     type: "line",
@@ -21,7 +21,7 @@ const chartLine = new Chart(ctx, {
             450, 300, 600, 400, 600,
         ],
         backgroundColor: gradient,
-        borderColor: "rgba(7, 94, 84, 1)",
+        borderColor: "rgb(154, 32, 127)",
         borderWidth: 1,
         fill: true,
         tension: 0.4,
@@ -32,7 +32,7 @@ const chartLine = new Chart(ctx, {
             350, 400, 500, 300, 500,
         ],
         backgroundColor: gradient,
-        borderColor: "rgba(239, 193, 24, 1)",
+        borderColor: "rgb(84, 21, 94)",
         borderWidth: 1,
         fill: true,
         tension: 0.4,
